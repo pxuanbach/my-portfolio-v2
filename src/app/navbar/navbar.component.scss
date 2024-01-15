@@ -1,0 +1,22 @@
+@use '../../base' as base;
+
+.navbar {
+  min-width: base.$navbar-width;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    a {
+      text-decoration: none;
+      color: #267CB9;
+    }
+    a:hover, a:focus {
+      color: #069;
+    }
+  }
+
+  .navbar-intro {
+    text-align: center;
+  }
+}
