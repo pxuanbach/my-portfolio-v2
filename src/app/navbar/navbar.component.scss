@@ -1,22 +1,41 @@
 @use '../../base' as base;
 
-.navbar {
-  min-width: base.$navbar-width;
-  padding: 1rem 2rem;
+.card {
+  min-width: base.$navbar-min-width;
+  width: base.$navbar-width;
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  gap: 1rem;
 
-  h1 {
-    a {
-      text-decoration: none;
-      color: #267CB9;
-    }
-    a:hover, a:focus {
-      color: #069;
-    }
-  }
-
-  .navbar-intro {
+  .card-intro {
     text-align: center;
+    
+    p {
+      margin: 0.2rem auto;
+    }
   }
+
+  .card-socials {
+    display: inline-flex;
+    justify-content: center;
+    list-style: none;
+    gap: 0.2rem 0.5rem;
+    flex-wrap: wrap;
+
+    li {
+      position: relative;
+
+      a:hover {
+        font-weight: 600;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  .card-aboutme {
+    text-align: justify;
+  }
+
 }

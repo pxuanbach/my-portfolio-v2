@@ -7,5 +7,19 @@
   padding: 0;
 }
 
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+h1 {
+  color: base.$h1-color;
+}
+
+a {
+  text-decoration: none !important;
+  color: #267CB9 !important;
+}
+
+a:hover, a:focus {
+  color: #069 !important;
+}
+
+div, p {
+  font-size: base.$normal-text-size;
+}

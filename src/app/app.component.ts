@@ -11,7 +11,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     CommonModule, 
     RouterOutlet,
     NavbarComponent,
-    PortfolioComponent
+    PortfolioComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
