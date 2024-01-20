@@ -22,7 +22,7 @@ export class NavbarComponent {
   country: string = "";
   email: string = "";
   phoneNumber: string = "";
-  socials: Array<any> = [];
+  socials: Array<Social> = [];
   aboutMe: string = ""
 
   constructor(
@@ -31,10 +31,10 @@ export class NavbarComponent {
   ) {}
 
   ngOnInit() {
-    forkJoin(
+    forkJoin([
       this.basicDetailService.getBasicDetail(),
       this.socialsService.getSocials()
-    )
+    ])
       .pipe()
       .subscribe(([basicDetail, socials]: [BasicDetail, Social[]]) => {
         this.name = basicDetail.name;

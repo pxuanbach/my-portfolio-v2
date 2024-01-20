@@ -1,15 +1,11 @@
 import { Observable } from 'rxjs';
 
-export interface Description {
-  content: string;
-}
-
 export interface Experience {
   companyName: string;
   position: string;
   startDate: string;
   endDate: string;
-  descriptions: Description[];
+  descriptions: string[];
 }
 
 export abstract class ExperiencesData {

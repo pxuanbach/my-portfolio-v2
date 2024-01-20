@@ -1,0 +1,26 @@
+@import '../portfolio.component';
+
+.education, .education-title{
+  display: flex;
+}
+
+.education {
+  position: relative;
+  flex-direction: column;
+  row-gap: 0.25rem;
+
+  .education-title {
+    justify-content: space-between;
+  }
+}
+
+.education:not(:last-child):after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  height: 1px;
+  width: 94%;
+  background: $sub-border-color;
+  border: none;
+}

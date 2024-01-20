@@ -1,5 +1,37 @@
 @use '../../base' as base;
 
+$border-color: #b6b6b8;
+$sub-border-color: #e2e2e2;
+
 .portfolio {
   width: base.$portfolio-width;
+  padding: 2rem 2.5rem;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  h1, h2, h3 {
+    line-height: 1.1;
+  }
+
+  hr {
+    border: 0;
+    background: $border-color;
+    height: 1px;
+    margin: 0 0 3rem;
+  }
 }
+
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  position: relative;
+  gap: 1.25rem;
+}
+
