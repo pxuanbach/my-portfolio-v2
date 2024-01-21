@@ -1,16 +1,18 @@
 <div class="portfolio-card">
   <h2>Experience</h2>
-  <div class="experience" *ngFor="let experience of experiences">
-    <div class="experience-title">
-      <h3>
-        {{ experience.companyName }}, <i>{{ experience.position }}</i>
-      </h3>
-      <h3>{{ experience.startDate }} - {{ experience.endDate }}</h3>
-    </div>
-    <div class="experience-description">
-      <ul>
-        <li *ngFor="let des of experience.descriptions" [innerHTML]="des"></li>
-      </ul>
+  <div>
+    <div class="experience" *ngFor="let experience of experiences">
+      <div class="experience-title">
+        <h3>
+          {{ experience.companyName }}, <i>{{ experience.position }}</i>
+        </h3>
+        <h3>{{ experience.startDate }} - {{ experience.endDate }}</h3>
+      </div>
+      <div class="experience-description">
+        <ul>
+          <li *ngFor="let des of experience.descriptions" [innerHTML]="des"></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

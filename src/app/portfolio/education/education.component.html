@@ -1,15 +1,17 @@
 <div class="portfolio-card">
   <h2>Education</h2>
-  <div class="education" *ngFor="let education of educations">
-    <div class="education-title">
-      <h3>{{ education.name }}</h3>
-      <h3>{{ education.startDate }} - {{ education.endDate }}</h3>
-    </div>
-    <div class="education-major">
-      <p>Major: <b>{{ education.major }}</b></p>
-    </div>
-    <div class="education-gpa">
-      <p>GPA: <b>{{ education.gpa }}/{{ education.max_gpa }}</b></p>
+  <div>
+    <div class="education" *ngFor="let education of educations">
+      <div class="education-title">
+        <h3>{{ education.name }}</h3>
+        <h3>{{ education.startDate }} - {{ education.endDate }}</h3>
+      </div>
+      <div class="education-major">
+        <p>Major: <b>{{ education.major }}</b></p>
+      </div>
+      <div class="education-gpa">
+        <p>GPA: <b>{{ education.gpa }}/{{ education.max_gpa }}</b></p>
+      </div>
     </div>
   </div>
 </div>

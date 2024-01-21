@@ -14,7 +14,11 @@
   }
 }
 
-.education:not(:last-child):after {
+.education:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.education:not(:last-child)::after {
   content: '';
   position: absolute;
   left: 0;

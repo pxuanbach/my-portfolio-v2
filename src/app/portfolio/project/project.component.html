@@ -1,0 +1,30 @@
+<div class="portfolio-card">
+  <h2>Projects</h2>
+  <div>
+    <div class="projects" *ngFor="let project of projects">
+      <div class="project-title">
+        <h3>
+          {{ project.name }}, <i>{{ project.myRole }}</i>
+        </h3>
+        <h3>{{ project.startDate }} - {{ project.endDate }}</h3>
+      </div>
+      <div class="project-short-des">
+        <p [innerHTML]="project.shortDes"></p>
+      </div>
+      <div class="project-descriptions">
+        <ul>
+          <li *ngFor="let des of project.descriptions">
+            <p [innerHTML]="des"></p>
+          </li>
+        </ul>
+      </div>
+      <div class="project-key-techs">
+        <p>Technologies:&nbsp;</p> 
+        <div *ngFor="let tech of project.keyTechs; index as i;">
+          <p *ngIf="i < project.keyTechs.length - 1">{{ tech }},&nbsp;</p>
+          <p *ngIf="i === project.keyTechs.length - 1">{{ tech }}.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
