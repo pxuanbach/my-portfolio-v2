@@ -6,7 +6,7 @@ export interface Education {
   startDate: string;
   endDate: string;
   gpa: number;
-  max_gpa: number;
+  maxGpa: number;
 }
 
 export abstract class EducationsData {

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import { LandingComponent } from './pages/landing/landing.component';
+
 
 @Component({
   selector: 'app-root',
@@ -10,8 +10,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
   imports: [
     CommonModule, 
     RouterOutlet,
-    NavbarComponent,
-    PortfolioComponent,
+    LandingComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

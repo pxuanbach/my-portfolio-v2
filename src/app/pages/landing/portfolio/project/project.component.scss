@@ -22,14 +22,3 @@
 .projects:not(:last-child) {
   margin-bottom: 1rem;
 }
-
-.projects:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -0.5rem;
-  height: 1px;
-  width: 94%;
-  background: $sub-border-color;
-  border: none;
-}

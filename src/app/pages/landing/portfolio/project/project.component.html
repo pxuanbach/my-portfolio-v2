@@ -19,7 +19,7 @@
         </ul>
       </div>
       <div class="project-key-techs">
-        <p>Technologies:&nbsp;</p> 
+        <p><b>Technologies:</b>&nbsp;</p> 
         <div *ngFor="let tech of project.keyTechs; index as i;">
           <p *ngIf="i < project.keyTechs.length - 1">{{ tech }},&nbsp;</p>
           <p *ngIf="i === project.keyTechs.length - 1">{{ tech }}.</p>

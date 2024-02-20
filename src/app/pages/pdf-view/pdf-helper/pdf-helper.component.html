@@ -1,0 +1,10 @@
+<form class="pdf-helper" [formGroup]="appForm" (ngSubmit)="ngxOnSubmit()">
+  <div class="search-box">
+    <input type="text" id="input-search" formControlName="search" placeholder="enter something...">
+  </div>
+  <div class="btn-submit">
+    <button type="submit">
+      Search
+    </button>
+  </div>
+</form>

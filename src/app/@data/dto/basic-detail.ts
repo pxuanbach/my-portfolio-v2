@@ -5,7 +5,7 @@ export interface BasicDetail {
   country: string;
   email: string;
   phoneNumber: string;
-  aboutMe: string;
+  aboutMe: string[];
 }
 
 export abstract class BasicDetailData {

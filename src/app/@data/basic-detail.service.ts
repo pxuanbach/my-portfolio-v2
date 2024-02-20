@@ -1,19 +1,16 @@
 import { Injectable } from '@angular/core';
 import { BasicDetail, BasicDetailData } from './dto/basic-detail';
 import { Observable, of } from 'rxjs';
+import BasicDetailJson from './db/basic-detail.json';
+
 
 @Injectable()
 export class BasicDetailService extends BasicDetailData {
-  name: string = 'Bach Pham';
-  country: string = 'Ho Chi Minh City, Vietnam';
-  phoneNumber: string = '(+84) 37*****85';
-  email: string = 'pxuanbach.dev@gmail.com';
-  aboutMe: string =
-    `
-    I am an aspiring <b>software engineer</b> who enjoys connecting the dots by the use of technology.
-    <br/> <br/>
-    I consider myself a kind, empathetic, creative and determined person. I am pragmatic and organized, yet flexible.
-    `;
+  name: string = BasicDetailJson.name;
+  country: string = BasicDetailJson.country;
+  phoneNumber: string = BasicDetailJson.phoneNumber;
+  email: string = BasicDetailJson.email;
+  aboutMe: string[] = BasicDetailJson.aboutMe;
 
   getBasicDetail(): Observable<BasicDetail> {
     return of({

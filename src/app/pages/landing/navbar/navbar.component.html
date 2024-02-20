@@ -1,0 +1,24 @@
+<div class="navbar">
+  <div class="card">
+    <h1>
+      <a href="#">{{ name }}</a>
+    </h1>
+    <div class="card-intro">
+      <p>{{ country }}</p>
+      <p>{{ phoneNumber }}</p>
+      <p>{{ email }}</p>
+    </div>
+    <ul class="card-socials">
+      <li *ngFor="let social of socials; index as i">
+        <a *ngIf="!social.hidden" href="{{ social.link }}" target="_blank">
+          {{ social.name }}
+        </a>
+      </li>
+    </ul>
+    <div class="card-aboutme">
+      <div *ngFor="let line of aboutMe">
+        <span [innerHTML]="line"></span> <br> <br>
+      </div>
+    </div>
+  </div>
+</div>

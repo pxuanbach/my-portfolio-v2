@@ -1,0 +1,11 @@
+.pdf-view-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  pdf-viewer {
+    height: 100%;
+  }
+}

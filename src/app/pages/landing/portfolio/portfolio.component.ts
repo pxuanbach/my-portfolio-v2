@@ -2,15 +2,15 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { forkJoin } from 'rxjs';
 
-import { EducationsService } from '../@data/educations.service';
-import { ExperiencesService } from '../@data/experiences.service';
-import { SkillsService } from '../@data/skills.service';
-import { ProjectsService } from '../@data/projects.service';
+import { EducationsService } from '../../../@data/educations.service';
+import { ExperiencesService } from '../../../@data/experiences.service';
+import { SkillsService } from '../../../@data/skills.service';
+import { ProjectsService } from '../../../@data/projects.service';
 
-import { Education } from '../@data/dto/educations';
-import { Experience } from '../@data/dto/experiences';
-import { Skill } from '../@data/dto/skills';
-import { Project } from '../@data/dto/projects';
+import { Education } from '../../../@data/dto/educations';
+import { Experience } from '../../../@data/dto/experiences';
+import { Skill } from '../../../@data/dto/skills';
+import { Project } from '../../../@data/dto/projects';
 
 import { EducationComponent } from './education/education.component';
 import { ExperienceComponent } from './experience/experience.component';
@@ -19,7 +19,7 @@ import { ProjectComponent } from './project/project.component';
 
 
 @Component({
-  selector: 'app-portfolio',
+  selector: 'app-portfolio-component',
   standalone: true,
   imports: [
     CommonModule,

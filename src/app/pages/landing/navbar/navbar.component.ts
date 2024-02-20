@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BasicDetailService } from '../@data/basic-detail.service';
-import { SocialsService } from '../@data/socials.service';
 import { forkJoin } from 'rxjs';
-import { BasicDetail } from '../@data/dto/basic-detail';
-import { Social } from '../@data/dto/socials';
+
+import { BasicDetailService } from '../../../@data/basic-detail.service';
+import { SocialsService } from '../../../@data/socials.service';
+import { BasicDetail } from '../../../@data/dto/basic-detail';
+import { Social } from '../../../@data/dto/socials';
+
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-navbar-component',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
@@ -23,7 +25,7 @@ export class NavbarComponent {
   email: string = "";
   phoneNumber: string = "";
   socials: Array<Social> = [];
-  aboutMe: string = ""
+  aboutMe: string[] = []
 
   constructor(
     private basicDetailService: BasicDetailService,

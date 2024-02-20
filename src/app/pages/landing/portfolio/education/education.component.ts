@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Education } from '../../@data/dto/educations';
+import { Education } from '../../../../@data/dto/educations';
 
 @Component({
   selector: 'app-portfolio-education',
