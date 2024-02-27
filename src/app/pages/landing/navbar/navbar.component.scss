@@ -12,7 +12,6 @@
     flex-direction: column;
     text-align: center;
     
-  
     .card-socials, .card-aboutme {
       margin-top: 0.125rem;
       margin-bottom: 2rem;
@@ -27,15 +26,17 @@
       }
     }
   
-  
-  
-    .card-socials {
+    .card-nav, .card-socials {
+      display: inline-flex;
+      list-style: none;
+      flex-wrap: wrap;
       display: inline-flex;
       justify-content: center;
-      list-style: none;
-      gap: 0.2rem 0.5rem;
-      flex-wrap: wrap;
+    }
   
+    .card-socials {
+      gap: 0.2rem 0.5rem;
+      
       li {
         position: relative;
   
@@ -49,6 +50,19 @@
     .card-aboutme {
       text-align: justify;
     }
-  
+    
+    .card-nav {
+      gap: 0.2rem 1rem;
+
+      a {
+        cursor: pointer;
+
+        i {
+          font-size: 1.5rem;
+        }
+      }
+      
+      
+    }
   }
 }

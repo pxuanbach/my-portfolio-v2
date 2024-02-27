@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PdfViewComponent } from './pdf-view.component';
 import { PdfViewRoutingModule } from './pdf-view-routing.module';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
-import { PdfHelperComponent } from './pdf-helper/pdf-helper.component';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { PdfService } from '../../@services';
+import { BasicDetailService } from '../../@data/basic-detail.service';
+import { SocialsService } from '../../@data/socials.service';
 
 
 @NgModule({
@@ -12,12 +14,15 @@ import { PdfHelperComponent } from './pdf-helper/pdf-helper.component';
     CommonModule,
     ReactiveFormsModule,
     PdfViewRoutingModule,
-    PdfViewerModule,
-    PdfHelperComponent
+    NgxExtendedPdfViewerModule
   ],
   declarations: [
     PdfViewComponent
   ],
-  providers: []
+  providers: [
+    PdfService,
+    BasicDetailService,
+    SocialsService,
+  ]
 })
 export class PdfViewModule { }

@@ -1,6 +1,6 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { PdfViewerComponent } from 'ng2-pdf-viewer';
+import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { PdfService } from '../../@services/pdf.service';
 
 @Component({
   selector: 'app-pdf-view',
@@ -9,17 +9,25 @@ import { PdfViewerComponent } from 'ng2-pdf-viewer';
 })
 export class PdfViewComponent implements OnInit {
 
-  @ViewChild(PdfViewerComponent) private pdfComponent!: PdfViewerComponent;
+  pdfService: PdfService;
 
-  constructor() {}
+  public base64Src: string = '';
+
+  constructor(
+    _pdfService: PdfService
+  ) {
+    this.pdfService = _pdfService;
+
+    this.pdfService.createPDF((result: string) => {
+      this.base64Src = result;
+    })
+  }
+  
+  afterLoadComplete() {
+    console.log('after-load-complete');
+  }
 
   ngOnInit(): void {
 
-  }
-
-  search(stringToSearch: string) {
-    this.pdfComponent.eventBus.dispatch('find', {
-      query: stringToSearch, type: 'again', caseSensitive: false, findPrevious: undefined, highlightAll: true, phraseSearch: true
-    });
   }
 }

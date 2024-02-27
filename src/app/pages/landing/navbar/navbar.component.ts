@@ -6,12 +6,13 @@ import { BasicDetailService } from '../../../@data/basic-detail.service';
 import { SocialsService } from '../../../@data/socials.service';
 import { BasicDetail } from '../../../@data/dto/basic-detail';
 import { Social } from '../../../@data/dto/socials';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-navbar-component',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   providers: [

@@ -7,7 +7,7 @@ export const routes: Routes = [
     component: LandingComponent
   },
   {
-    path: "pdf",
+    path: "pdf-view",
     loadChildren: () => import('./pages/pdf-view/pdf-view.module').then(m => m.PdfViewModule)
   },
   {

@@ -1,6 +1,5 @@
 <div class="pdf-view-container">
-  <app-pdf-helper-component></app-pdf-helper-component>
-  <pdf-viewer
+  <!-- <pdf-viewer #pdfViewer
     [src]="'https://pdfobject.com/pdf/sample.pdf'"
     [render-text]="true"
     [original-size]="false"
@@ -8,5 +7,12 @@
     [show-all]="true"
     [show-borders]="true"
     [external-link-target]="'blank'"
-  ></pdf-viewer>
-</div>
+    (after-load-complete)="afterLoadComplete($event)" 
+  ></pdf-viewer> -->
+  <ngx-extended-pdf-viewer
+    [base64Src]="base64Src"
+    [height]="'auto'" 
+    [textLayer]="true"
+    [showHandToolButton]="true">
+  </ngx-extended-pdf-viewer>
+</div>=
