@@ -12,23 +12,40 @@
       "Deploy source code to Development environment using PM2."
     ],
     "keyTechs": [
-      "JavaScript", "ExpressJS", "AngularJS", "MongoDB", "Agenda", "PM2", "Bootstrap"
+      "JavaScript", "ExpressJS", "AngularJS", "MongoDB", "Linux", "Agenda", "PM2", "Bootstrap"
+    ]
+  },
+  {
+    "name": "Iyyara & Halalfoodhunt",
+    "myRole": "Backend",
+    "shortDes": "Iyyara & Halalfoodhunt is an app from Singapore that verifies halal food options (eateries, online businesses, food vendors, etc.) before publishing them.",
+    "startDate": "08/2023",
+    "endDate": "02/2024",
+    "descriptions": [
+      "Develop API for a new module using ExpressJS and Prisma.",
+      "Ensure project integrity with thorough testing and ongoing maintenance.",
+      "Configure Gitlab CI/CD to deploy the product to staging and production environments using Docker.",
+      "Schedule the database backup that uses a containerized Shell Script service, using Docker."
+    ],
+    "keyTechs": [
+      "JavaScript", "MeteorJS", "ExpressJS", "MongoDB", "Docker", "Shell Script", "AWS S3", "Prisma"
     ]
   },
   {
     "name": "Mark Platform",
     "myRole": "Backend",
     "shortDes": "The Mark Platform is a review and discovery platform for interior designers in Singapore.",
-    "startDate": "07/2022",
-    "endDate": "06/2023",
+    "startDate": "07/2023",
+    "endDate": "02/2024",
     "descriptions": [
       "Create middleware to dynamically authorize user roles.",
       "Use FastAPI to develop APIs and test it with Pytest.",
-      "Integrate Stripe payment APIs.",
-      "Set up GitLab CI/CD for automatic deployment using Docker on a DigitalOcean Droplet."
+      "Integrate Stripe payment APIs into the subscription system.",
+      "Configure Gitlab CI/CD for automatic deployment using Docker on a DigitalOcean Droplet.",
+      "Set up zero downtime deployment for the system using Docker Compose and Nginx."
     ],
     "keyTechs": [
-      "Python", "FastAPI", "PostgreSQL", "Docker", "SQLAlchemy", "Pytest", "Firebase"
+      "Python", "FastAPI", "PostgreSQL", "Docker", "Nginx", "Linux", "SQLAlchemy", "Pytest", "Firebase"
     ]
   }
 ]

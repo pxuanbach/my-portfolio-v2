@@ -6,7 +6,11 @@ import { PdfViewRoutingModule } from './pdf-view-routing.module';
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { PdfService } from '../../@services';
 import { BasicDetailService } from '../../@data/basic-detail.service';
-import { SocialsService } from '../../@data/socials.service';
+import { EducationsService } from '../../@data/educations.service';
+import { SkillsService } from '../../@data/skills.service';
+import { ExperiencesService } from '../../@data/experiences.service';
+import { ProjectsService } from '../../@data/projects.service';
+
 
 
 @NgModule({
@@ -22,7 +26,10 @@ import { SocialsService } from '../../@data/socials.service';
   providers: [
     PdfService,
     BasicDetailService,
-    SocialsService,
+    EducationsService,
+    SkillsService,
+    ExperiencesService,
+    ProjectsService
   ]
 })
 export class PdfViewModule { }
