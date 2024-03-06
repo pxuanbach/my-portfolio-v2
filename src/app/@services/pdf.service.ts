@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { forkJoin } from 'rxjs';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
+import { environment } from '../../environments/environment';
 
 import { EducationsService } from '../@data/educations.service';
 import { BasicDetailService } from '../@data/basic-detail.service';
@@ -22,7 +23,8 @@ import { Project } from '../@data/dto/projects';
 export class PdfService {
   styles: any = {};
   content: Array<any> = [];
-  marginBottom: number = 6;
+  outlineMarginTop: number = 4;
+  sectionMarginBottom: number = 4;
 
   constructor(
     private basicDetailService: BasicDetailService,
@@ -31,6 +33,8 @@ export class PdfService {
     private skillsService: SkillsService,
     private projectsService: ProjectsService
   ) {
+    this.outlineMarginTop = environment.pdfOutlineMarginTop;
+    this.sectionMarginBottom = environment.pdfSectionMarginBottom;
     forkJoin([
       this.basicDetailService.getBasicDetail(),
       this.educationsService.getEducations(),
@@ -98,7 +102,7 @@ export class PdfService {
 
     educations.forEach((edu) => {
       temp.push({
-        margin: [0, 0, 0, this.marginBottom],
+        margin: [0, 0, 0, this.sectionMarginBottom],
         style: 'normalText',
         stack: [
           {
@@ -125,10 +129,6 @@ export class PdfService {
               },
             ],
           },
-          // {
-          //   text: edu.country,
-          //   style: 'normalText',
-          // },
           {
             text: edu.major.toUpperCase(),
           },
@@ -147,7 +147,7 @@ export class PdfService {
 
     experiences.forEach((exp) => {
       temp.push({
-        margin: [0, 0, 0, this.marginBottom],
+        margin: [0, 0, 0, this.sectionMarginBottom],
         style: 'normalText',
         stack: [
           {
@@ -195,7 +195,7 @@ export class PdfService {
 
     skills.forEach((skill) => {
       temp.push({
-        margin: [0, 0, 0, this.marginBottom],
+        margin: [0, 0, 0, this.sectionMarginBottom],
         style: 'normalText',
         stack: [
           {
@@ -221,7 +221,7 @@ export class PdfService {
     
     projects.forEach(proj => {
       temp.push({
-        margin: [0, 0, 0, this.marginBottom],
+        margin: [0, 0, 0, this.sectionMarginBottom],
         style: 'normalText',
         stack: [
           {
@@ -290,7 +290,7 @@ export class PdfService {
       ],
       style: 'h2',
       color: '#267CB9',
-      margin: [0, 6, 0, 0],
+      margin: [0, this.outlineMarginTop, 0, 0],
     };
   }
 
@@ -324,23 +324,23 @@ export class PdfService {
   generateStyles() {
     return {
       h1: {
-        fontSize: 18,
+        fontSize: environment.pdfH1FontSize,
         bold: true,
         lineHeight: 1,
       },
       h2: {
-        fontSize: 14,
+        fontSize: environment.pdfH2FontSize,
         bold: true,
         lineHeight: 1,
       },
       h3: {
-        fontSize: 11,
+        fontSize: environment.pdfNormalFontSize,
         bold: true,
         lineHeight: 1.2,
         color: '#494949',
       },
       normalText: {
-        fontSize: 11,
+        fontSize: environment.pdfNormalFontSize,
         lineHeight: 1.1,
         alignment: 'justify',
         color: '#666666',
