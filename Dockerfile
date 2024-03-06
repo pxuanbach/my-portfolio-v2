@@ -13,7 +13,7 @@ COPY ./ /usr/local/app/
 RUN npm install
 
 # Generate the build of the application
-RUN npm run build
+RUN npm run build --prod
 
 
 # Stage 2: Serve app with nginx server
@@ -21,12 +21,14 @@ RUN npm run build
 # Use official nginx image as the base image
 FROM nginx:1.16.0-alpine
 
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 WORKDIR /usr/share/nginx/html
 
 RUN apk add --no-cache bash
 
 # Copy the build output to replace the default nginx contents.
-COPY --from=build /usr/local/app/dist/portfolio /usr/share/nginx/html
+COPY --from=build /usr/local/app/dist/portfolio/browser /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
