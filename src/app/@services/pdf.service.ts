@@ -61,12 +61,12 @@ export class PdfService {
               stack: this.generateEducationSection(educations),
             },
             {
-              nodeName: 'Experience',
-              stack: this.generateExperienceSection(experiences),
-            },
-            {
               nodeName: 'Skills',
               stack: this.generateTechnicalSkillsSection(skills),
+            },
+            {
+              nodeName: 'Experience',
+              stack: this.generateExperienceSection(experiences),
             },
             {
               nodeName: 'Projects',
