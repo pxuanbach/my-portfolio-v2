@@ -4,7 +4,9 @@
     <div class="education" *ngFor="let education of educations">
       <div class="education-title">
         <h3>{{ education.name }}</h3>
-        <h3>{{ education.startDate }} - {{ education.endDate }}</h3>
+      </div>
+      <div class="education-period">
+        <p>Period: <b>{{ education.startDate }} - {{ education.endDate }}</b></p>
       </div>
       <div class="education-major">
         <p>Major: <b>{{ education.major }}</b></p>

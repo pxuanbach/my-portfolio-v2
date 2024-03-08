@@ -20,6 +20,10 @@ $sub-border-color: #e2e2e2;
     line-height: 1.1;
   }
 
+  h2::first-letter {
+    color: base.$a-color;
+  }
+
   hr {
     border: 0;
     background: $border-color;

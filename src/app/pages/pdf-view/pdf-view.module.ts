@@ -12,7 +12,6 @@ import { ExperiencesService } from '../../@data/experiences.service';
 import { ProjectsService } from '../../@data/projects.service';
 
 
-
 @NgModule({
   imports: [
     CommonModule,

@@ -24,11 +24,11 @@ h3 {
 
 a {
   text-decoration: none !important;
-  color: #267CB9 !important;
+  color: base.$a-color !important;
 }
 
 a:hover, a:focus {
-  color: #069 !important;
+  color: base.$a-hover-color !important;
 }
 
 div, p {

@@ -4,11 +4,16 @@
       <a href="#">{{ name }}</a>
     </h1>
     <div class="card-intro">
-      <p>{{ country }}</p>
-      <p>{{ phoneNumber }}</p>
-      <p>{{ email }}</p>
+      <p *ngIf="country !== ''">{{ country }}</p>
+      <p *ngIf="phoneNumber !== ''">{{ phoneNumber }}</p>
+      <p *ngIf="email !== ''">{{ email }}</p>
     </div>
     <ul class="card-socials">
+      <li>
+        <a routerLink="pdf-view" routerLinkActive="active" target="_blank">
+          Resume
+        </a>
+      </li>
       <li *ngFor="let social of socials; index as i">
         <a *ngIf="!social.hidden" href="{{ social.link }}" target="_blank">
           {{ social.name }}
@@ -21,21 +26,11 @@
       </div>
     </div>
     <ul class="card-nav">
-      <li>
+      <!-- <li>
         <a routerLink="pdf-view" routerLinkActive="active">
           <i class="fa-solid fa-file-pdf"></i>
         </a>
-      </li>
-      <li>
-        <a routerLink="" routerLinkActive="active">
-          <i class="fa-solid fa-umbrella-beach"></i>
-        </a>
-      </li>
-      <li>
-        <a routerLink="" routerLinkActive="active">
-          <i class="fa-solid fa-landmark"></i>
-        </a>
-      </li>
+      </li> -->
     </ul>
   </div>
 </div>

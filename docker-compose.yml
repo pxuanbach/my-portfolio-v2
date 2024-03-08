@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  portfolio-app_blue: &app
+    image: pxuanbach/my-portfolio-v2
+    ports:
+      - 8000:80
+
+  # portfolio-app_green:
+  #   <<: *app
+  #   ports:
+  #     - 8001:80

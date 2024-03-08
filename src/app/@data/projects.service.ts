@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { ProjectsData, Project } from './dto/projects';
-import ProjectsJson from './db/projects.json';
+import ProjectsJson from '../../assets/db/projects.json';
 
 
 @Injectable()

@@ -1,0 +1,132 @@
+[
+  {
+    "keyName": "Programming Language",
+    "relatedTechs": [
+      {
+        "name": "Python",
+        "level": 4
+      },
+      {
+        "name": "JavaScript",
+        "level": 3
+      },
+      {
+        "name": "TypeScript",
+        "level": 3
+      },
+      {
+        "name": "C#",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "keyName": "Python Framework/Library",
+    "relatedTechs": [
+      {
+        "name": "FastAPI",
+        "level": 4
+      },
+      {
+        "name": "SQLAlchemy",
+        "level": 4
+      },
+      {
+        "name": "APScheduler",
+        "level": 3
+      },
+      {
+        "name": "Async IO",
+        "level": 3
+      },
+      {
+        "name": "FastAPI Users",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "keyName": "NodeJS Framework/Library",
+    "relatedTechs": [
+      {
+        "name": "ExpressJS",
+        "level": 3
+      }, 
+      {
+        "name": "AngularJS",
+        "level": 3
+      }, 
+      {
+        "name": "Angular",
+        "level": 3
+      }, 
+      {
+        "name": "MeteorJS",
+        "level": 2
+      }, 
+      {
+        "name": "NestJS",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "keyName": "Database",
+    "relatedTechs": [
+      {
+        "name": "PostgreSQL",
+        "level": 4
+      },
+      {
+        "name": "MongoDB",
+        "level": 4
+      }, 
+      {
+        "name": "SQL Server",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "keyName": "Cloud",
+    "relatedTechs": [
+      {
+        "name": "AWS EC2, Lightsail, S3",
+        "level": 3
+      }, 
+      {
+        "name": "Digital Ocean Droplet",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "keyName": "Others",
+    "relatedTechs": [
+      {
+        "name": "Docker",
+        "level": 4
+      },
+      {
+        "name": "Gitlab CI/CD",
+        "level": 4
+      },
+      {
+        "name": "Github Actions",
+        "level": 3
+      },
+      {
+        "name": "Linux",
+        "level": 3
+      },
+      {
+        "name": "Bash, Shell Script",
+        "level": 3
+      },
+      {
+        "name": "Nginx",
+        "level": 2
+      }
+    ]
+  }
+]

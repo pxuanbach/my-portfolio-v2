@@ -81,20 +81,28 @@ export class PdfService {
 
   //#region Generate content section
   generateIntroSection(basicDetail: BasicDetail) {
-    return [
+    const temp = [
       {
         text: basicDetail.name,
         style: 'h1',
-      },
-      {
+      }
+    ]
+
+    if (basicDetail.email !== '') {
+      temp.push({
         text: basicDetail.email,
         style: 'normalText',
-      },
-      {
+      })
+    }
+
+    if (basicDetail.country !== '') {
+      temp.push({
         text: basicDetail.country,
         style: 'normalText',
-      },
-    ];
+      })
+    }
+
+    return temp;
   }
 
   generateEducationSection(educations: Education[]) {
@@ -205,7 +213,7 @@ export class PdfService {
                 style: 'h3'
               }, 
               {
-                text: skill.relatedTechs.join(', '),
+                text: skill.relatedTechs?.length > 0 ? skill.relatedTechs.map(tech => tech.name).join(', ') + '.' : '',
               }
             ]
           },

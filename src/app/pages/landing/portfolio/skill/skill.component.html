@@ -1,5 +1,15 @@
 <div class="portfolio-card">
   <h2>Technical Skills</h2>
+  <!-- <div class="skill-hint">
+    <i>
+      <h4>*Proficiency Description</h4>
+      <p><b>1-Basic:</b> Basic knowledge, needs much guidance and support in using the competence</p>
+      <p><b>2-Intermediate:</b> Able to work in the area, needs some guidance in using the competence</p>
+      <p><b>3-Intermediate:</b> Good knowledge and skills, works independently, has sound experience in using the competence</p>
+      <p><b>4-Proficient/Advanced:</b> Advanced knowledge and skills, provides guidance and direction to others</p>
+      <p><b>5-Expert:</b> Exceptional knowledge and skills, perceived as an authority in this competence area, is innovative in using the competence</p>
+    </i>
+  </div> -->
   <div>
     <div class="skills" *ngFor="let skill of skills">
       <div class="skills-key-name">
@@ -9,8 +19,8 @@
         class="related-techs"
         *ngFor="let tech of skill.relatedTechs; index as i"
       >
-        <p *ngIf="i < skill.relatedTechs.length - 1">{{ tech }},&nbsp;</p>
-        <p *ngIf="i === skill.relatedTechs.length - 1">{{ tech }}.</p>
+        <p *ngIf="i < skill.relatedTechs.length - 1">{{ tech.name }},&nbsp;</p>
+        <p *ngIf="i === skill.relatedTechs.length - 1">{{ tech.name }}.</p>
       </div>
     </div>
   </div>

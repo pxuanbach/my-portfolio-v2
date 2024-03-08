@@ -7,8 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build-image": "docker build -t pxuanbach/my-portfolio-v2 . --no-cache",
-    "push-image": "docker push pxuanbach/my-portfolio-v2"
+    "build-image": "docker build -t pxuanbach/my-portfolio-v2 .",
+    "push-image": "docker push pxuanbach/my-portfolio-v2",
+    "up": "docker compose up -d",
+    "down": "docker compose down",
+    "pull": "docker compose pull"
   },
   "private": true,
   "dependencies": {

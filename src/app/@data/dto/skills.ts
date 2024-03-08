@@ -2,7 +2,12 @@ import { Observable } from 'rxjs';
 
 export interface Skill {
   keyName: string;
-  relatedTechs: string[];   // frameworks and libraries
+  relatedTechs: RelatedTech[];   // frameworks and libraries
+}
+
+interface RelatedTech {
+  name: string;
+  level?: number;
 }
 
 export abstract class SkillsData {

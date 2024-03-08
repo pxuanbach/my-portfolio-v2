@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { Social, SocialsData } from "./dto/socials";
-import SocialsJson from "./db/socials.json";
+import SocialsJson from "../../assets/db/socials.json";
 
 
 @Injectable()

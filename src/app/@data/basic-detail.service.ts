@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BasicDetail, BasicDetailData } from './dto/basic-detail';
 import { Observable, of } from 'rxjs';
-import BasicDetailJson from './db/basic-detail.json';
+import BasicDetailJson from '../../assets/db/basic-detail.json';
 
 
 @Injectable()
