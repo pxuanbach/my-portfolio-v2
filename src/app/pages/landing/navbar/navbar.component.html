@@ -6,7 +6,7 @@
     <div class="card-intro">
       <p *ngIf="country !== ''">{{ country }}</p>
       <p *ngIf="phoneNumber !== ''">{{ phoneNumber }}</p>
-      <p *ngIf="email !== ''">{{ email }}</p>
+      <p *ngIf="email !== ''"><a href="{{'mailto:' + email}}">{{ email }}</a></p>
     </div>
     <ul class="card-socials">
       <li>

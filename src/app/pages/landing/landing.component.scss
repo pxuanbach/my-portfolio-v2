@@ -1,19 +1,12 @@
 @use '../../../base' as base;
 
 .container {
-  max-width: base.$container-max-width;
-  margin: 0 auto;
-  display: flex;
-  width: 100%;
+  display: block;
   height: auto;
 
   * {
     font-family: base.$primary-font-family;
     color: base.$normal-text-color;
     background-color: base.$background-color;
-  }
-
-  @media screen and (min-width: 768px) {
-    
   }
 }

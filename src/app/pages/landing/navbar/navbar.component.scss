@@ -1,9 +1,7 @@
 @use '../../../../base' as base;
 
 .navbar {
-  position: relative;
-  min-width: base.$navbar-min-width;
-  width: base.$navbar-width;
+  display: flex;
   padding: 2rem 1.5rem;
 
   .card {

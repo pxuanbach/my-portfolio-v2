@@ -1,0 +1,109 @@
+$breakpoints: (
+  xs: (max: 600px),
+  sm: (min: 601px, max: 959px),
+  md: (min: 960px, max: 1279px),
+  lg: (min: 1280px, max: 1919px),
+  xl: (min: 1920px)
+);
+
+@media (max-width: 600px) {
+  .container {
+    width: 100% !important; 
+    transition: all 0.5s ease !important;
+
+    .navbar {
+      width: 100% !important;
+      padding: 1rem 1.5rem 0rem !important;
+      transition: all 0.5s ease !important;
+    }
+
+    .portfolio {
+      width: 100% !important;
+      padding: 1rem 1.5rem !important;
+      transition: all 0.5s ease !important;
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 959px) {
+  .container {
+    width: 100% !important; 
+    transition: all 0.5s ease !important;
+
+    .navbar {
+      width: 100% !important;
+      padding: 2rem 5rem 0rem !important;
+      transition: all 0.5s ease !important;
+    }
+
+    .portfolio {
+      width: 100% !important;
+      transition: all 0.5s ease !important;
+    }
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1279px) {
+  .container {
+    display: flex !important;
+    flex-direction: row !important;
+    max-width: 1024px !important;
+    width: 100% !important;
+    margin: 0 auto;
+    transition: all 0.5s ease !important;
+
+    .navbar {
+      max-width: 307.2px !important;
+      position: fixed !important;
+      transition: all 0.5s ease !important;
+    }
+
+    .portfolio {
+      max-width: 716.8px !important;
+      margin: 0 0 0 307.2px;
+      transition: all 0.5s ease-in !important;
+    }
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+  .container {
+    display: flex !important;
+    flex-direction: row !important;
+    max-width: 1280px !important;
+    width: 100% !important;
+    margin: 0 auto;
+    transition: all 0.5s ease !important;
+
+    .navbar {
+      max-width: 384px !important;
+      position: fixed !important;
+      transition: all 0.5s ease !important;
+    }
+
+    .portfolio {
+      max-width: 896px !important;
+      margin: 0 0 0 384px !important;
+      transition: all 0.5s ease-in !important;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    display: flex !important;
+    flex-direction: row !important;
+    max-width: 1280px !important;
+    width: 100% !important;
+    margin: 0 auto;
+    transition: all 0.5s ease !important;
+
+    .navbar {
+      max-width: 384px !important;
+    }
+
+    .portfolio {
+      max-width: 896px !important;
+    }
+  }
+}
