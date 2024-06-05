@@ -13,10 +13,6 @@
       {
         "name": "TypeScript",
         "level": 3
-      },
-      {
-        "name": "C#",
-        "level": 3
       }
     ]
   },
@@ -28,15 +24,19 @@
         "level": 4
       },
       {
+        "name": "Django",
+        "level": 4
+      },
+      {
+        "name": "Django REST Framework",
+        "level": 4
+      },
+      {
         "name": "SQLAlchemy",
         "level": 4
       },
       {
         "name": "APScheduler",
-        "level": 3
-      },
-      {
-        "name": "Async IO",
         "level": 3
       },
       {
@@ -46,14 +46,14 @@
     ]
   },
   {
-    "keyName": "NodeJS Framework/Library",
+    "keyName": "Node.js Framework/Library",
     "relatedTechs": [
       {
-        "name": "ExpressJS",
+        "name": "Express.js",
         "level": 3
       }, 
       {
-        "name": "AngularJS",
+        "name": "Angular.js",
         "level": 3
       }, 
       {
@@ -61,11 +61,7 @@
         "level": 3
       }, 
       {
-        "name": "MeteorJS",
-        "level": 2
-      }, 
-      {
-        "name": "NestJS",
+        "name": "Meteor.js",
         "level": 2
       }
     ]
@@ -75,6 +71,10 @@
     "relatedTechs": [
       {
         "name": "PostgreSQL",
+        "level": 4
+      },
+      {
+        "name": "MySQL",
         "level": 4
       },
       {

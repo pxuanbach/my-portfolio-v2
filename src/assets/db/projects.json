@@ -1,18 +1,34 @@
 [
   {
+    "name": "Tico E-commerce",
+    "myRole": "Backend",
+    "shortDes": "Tico E-commerce is a set of commerce tools and modules that can be used to build unique commerce experiences",
+    "startDate": "01/2024",
+    "endDate": "Present",
+    "descriptions": [
+      "Discuss with the team, analyze the feature, and review other open-source projects.",
+      "Develop core features of an e-commerce module.",
+      "Setup Nginx as an API Gateway and load balancer.",
+      "Configure Docker Compose and GitLab CI to deploy to the Development environment."
+    ],
+    "keyTechs": [
+      "Python", "FastAPI", "PostgreSQL", "Docker", "Nginx", "SQLAlchemy", "Pytest", "Gitlab CI/CD", "EC2"
+    ]
+  },
+  {
     "name": "Iyyara & Halalfoodhunt",
     "myRole": "Backend",
     "shortDes": "Iyyara & Halalfoodhunt is an app from Singapore that verifies halal food options (eateries, online businesses, food vendors, etc.) before publishing them.",
     "startDate": "08/2023",
     "endDate": "Present",
     "descriptions": [
-      "Develop API for a new module using ExpressJS and Prisma.",
+      "Develop API for a new module using Express.js and Prisma.",
       "Ensure project integrity with thorough testing and ongoing maintenance.",
       "Configure Gitlab CI/CD to deploy the product to staging and production environments using Docker.",
       "Schedule the database backup that uses a containerized Shell Script service, using Docker."
     ],
     "keyTechs": [
-      "JavaScript", "MeteorJS", "ExpressJS", "MongoDB", "Docker", "Shell Script", "AWS S3", "Prisma"
+      "JavaScript", "Meteor.js", "Express.js", "MongoDB", "Docker", "Shell Script", "AWS S3", "Prisma"
     ]
   },
   {
@@ -22,13 +38,28 @@
     "startDate": "07/2023",
     "endDate": "02/2024",
     "descriptions": [
-      "Customize UI according to requirements using AngularJS, Bootstrap.",
+      "Customize UI according to requirements using Angular.js, Bootstrap.",
       "Develop a feature to support clients in tracking their referral numbers.",
       "Create a scheduler job that uses Agenda to synchronize data from 3rd Integration Apps.",
       "Deploy source code to Development environment using PM2."
     ],
     "keyTechs": [
-      "JavaScript", "ExpressJS", "AngularJS", "MongoDB", "Linux", "Agenda", "PM2", "Bootstrap"
+      "JavaScript", "Express.js", "Angular.js", "MongoDB", "Linux", "Agenda.js", "PM2", "Bootstrap"
+    ]
+  },
+  {
+    "name": "ELite Learning",
+    "myRole": "Backend",
+    "shortDes": "Elite Learning is an online training and learning platform.",
+    "startDate": "12/2022",
+    "endDate": "08/2023",
+    "descriptions": [
+      "Meet with the team to analyze the feature.",
+      "Develop the feature for managing quizzes in a course.",
+      "Test and maintain existing features."
+    ],
+    "keyTechs": [
+      "Python", "Django", "Django REST Framework", "MySQL", "Docker", "Pytest"
     ]
   },
   {
@@ -45,7 +76,7 @@
       "Set up zero downtime deployment for the system using Docker Compose and Nginx."
     ],
     "keyTechs": [
-      "Python", "FastAPI", "PostgreSQL", "Docker", "Nginx", "Linux", "SQLAlchemy", "Pytest", "Firebase"
+      "Python", "FastAPI", "PostgreSQL", "Docker", "Nginx", "Shell Script", "SQLAlchemy", "Pytest", "Firebase"
     ]
   }
 ]
