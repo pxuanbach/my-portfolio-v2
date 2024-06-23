@@ -8,6 +8,7 @@ export interface Project {
   endDate: string;
   descriptions: string[];
   keyTechs: string[];
+  teamsize: number;
 }
 
 export abstract class ProjectsData {

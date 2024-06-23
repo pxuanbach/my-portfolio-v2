@@ -23,8 +23,12 @@ import { Project } from '../@data/dto/projects';
 export class PdfService {
   styles: any = {};
   content: Array<any> = [];
-  outlineMarginTop: number = 4;
-  sectionMarginBottom: number = 4;
+  outlineMarginTop: number = 6;
+  sectionMarginBottom: number = 6;
+  heading1LineHeight: number = 1.2;
+  heading2LineHeight: number = 1.2;
+  heading3LineHeight: number = 1.2;
+  normalTextLineHeight: number = 1.1;
 
   constructor(
     private basicDetailService: BasicDetailService,
@@ -35,6 +39,10 @@ export class PdfService {
   ) {
     this.outlineMarginTop = environment.pdfOutlineMarginTop;
     this.sectionMarginBottom = environment.pdfSectionMarginBottom;
+    this.heading1LineHeight = environment.pdfHeading1LineHeight;
+    this.heading2LineHeight = environment.pdfHeading2LineHeight;
+    this.heading3LineHeight = environment.pdfHeading3LineHeight;
+    this.normalTextLineHeight = environment.pdfNormalTextLineHeight;
     forkJoin([
       this.basicDetailService.getBasicDetail(),
       this.educationsService.getEducations(),
@@ -203,7 +211,6 @@ export class PdfService {
 
     skills.forEach((skill) => {
       temp.push({
-        margin: [0, 0, 0, this.sectionMarginBottom],
         style: 'normalText',
         stack: [
           {
@@ -220,7 +227,11 @@ export class PdfService {
         ],
       });
     });
-
+    temp.push({
+      margin: [0, 0, 0, this.sectionMarginBottom],
+      style: 'nomalText',
+      stack: []
+    })
     return temp;
   }
 
@@ -267,7 +278,15 @@ export class PdfService {
             italics: true,
           },
           {
-            ul: proj.descriptions,
+            stack: [
+              {
+                text: 'Responsibilities: ',
+                bold: true
+              },
+              {
+                ul: proj.descriptions,
+              }
+            ]
           },
           {
             text: [
@@ -276,6 +295,15 @@ export class PdfService {
                 bold: true
               },
               proj.keyTechs.join(', ')
+            ]
+          },
+          {
+            text: [
+              {
+                text: 'Team size: ',
+                bold: true
+              },
+              proj.teamsize
             ]
           }
         ]
@@ -334,22 +362,22 @@ export class PdfService {
       h1: {
         fontSize: environment.pdfH1FontSize,
         bold: true,
-        lineHeight: 1,
+        lineHeight: this.heading1LineHeight,
       },
       h2: {
         fontSize: environment.pdfH2FontSize,
         bold: true,
-        lineHeight: 1,
+        lineHeight: this.heading2LineHeight,
       },
       h3: {
         fontSize: environment.pdfNormalFontSize,
         bold: true,
-        lineHeight: 1.2,
+        lineHeight: this.heading3LineHeight,
         color: '#494949',
       },
       normalText: {
         fontSize: environment.pdfNormalFontSize,
-        lineHeight: 1.1,
+        lineHeight: this.normalTextLineHeight,
         alignment: 'justify',
         color: '#666666',
       },

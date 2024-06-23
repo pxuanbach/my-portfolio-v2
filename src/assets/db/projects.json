@@ -1,35 +1,36 @@
 [
   {
-    "name": "Tico E-commerce",
-    "myRole": "Backend",
-    "shortDes": "Tico E-commerce is a set of commerce tools and modules that can be used to build unique commerce experiences",
-    "startDate": "01/2024",
-    "endDate": "Present",
-    "descriptions": [
-      "Discuss with the team, analyze the feature, and review other open-source projects.",
-      "Develop core features of an e-commerce module.",
-      "Setup Nginx as an API Gateway and load balancer.",
-      "Configure Docker Compose and GitLab CI to deploy to the Development environment."
-    ],
-    "keyTechs": [
-      "Python", "FastAPI", "PostgreSQL", "Docker", "Nginx", "SQLAlchemy", "Pytest", "Gitlab CI/CD", "EC2"
-    ]
-  },
-  {
     "name": "Iyyara & Halalfoodhunt",
-    "myRole": "Backend",
+    "myRole": "Back-end",
     "shortDes": "Iyyara & Halalfoodhunt is an app from Singapore that verifies halal food options (eateries, online businesses, food vendors, etc.) before publishing them.",
     "startDate": "08/2023",
     "endDate": "Present",
     "descriptions": [
-      "Develop API for a new module using Express.js and Prisma.",
-      "Ensure project integrity with thorough testing and ongoing maintenance.",
-      "Configure Gitlab CI/CD to deploy the product to staging and production environments using Docker.",
-      "Schedule the database backup that uses a containerized Shell Script service, using Docker."
+      "Develop APIs for a new module using Express.js and Prisma, ensuring data integrity with thorough testing.",
+      "Configure CI/CD pipeline to deploy product to staging and production environments with Docker.",
+      "Implement scheduled database backup using a Shell Script service within a Docker container."
     ],
     "keyTechs": [
-      "JavaScript", "Meteor.js", "Express.js", "MongoDB", "Docker", "Shell Script", "AWS S3", "Prisma"
-    ]
+      "JavaScript", "TypeScript", "Meteor.js", "Express.js", "Prisma", "MongoDB", "Docker", "GitLab CI/CD", "Shell Script", "AWS S3"
+    ],
+    "teamsize": 7
+  },
+  {
+    "name": "Tico E-commerce",
+    "myRole": "Back-end",
+    "shortDes": "Tico E-commerce is a set of commerce tools and modules that can be used to build unique commerce experiences.",
+    "startDate": "11/2022",
+    "endDate": "Present",
+    "descriptions": [
+      "Discuss with the team, analyze the feature, and review other open-source projects.",
+      "Develop core features of an e-commerce module, including Orders, Products, and Payments.",
+      "Setup Nginx as an API Gateway and Load Balancer.",
+      "Integrate Payment (VNPay, Momo, Stripe) and Shipping (GHTK, GHN) services into the system."
+    ],
+    "keyTechs": [
+      "Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "Docker", "Nginx", "Pytest", "GitLab CI/CD", "AWS EC2"
+    ],
+    "teamsize": 8
   },
   {
     "name": "Early Parrot",
@@ -38,45 +39,31 @@
     "startDate": "07/2023",
     "endDate": "02/2024",
     "descriptions": [
-      "Customize UI according to requirements using Angular.js, Bootstrap.",
-      "Develop a feature to support clients in tracking their referral numbers.",
-      "Create a scheduler job that uses Agenda to synchronize data from 3rd Integration Apps.",
-      "Deploy source code to Development environment using PM2."
+      "Build the UI using AngularJS and Bootstrap to provide a smooth experience.",
+      "Develop features to support clients in tracking their referral numbers.",
+      "Develop data synchronization features and ensure the consistency of user data from various SaaS providers.",
+      "Resolve race conditions in existing features and during large data synchronization."
     ],
     "keyTechs": [
-      "JavaScript", "Express.js", "Angular.js", "MongoDB", "Linux", "Agenda.js", "PM2", "Bootstrap"
-    ]
-  },
-  {
-    "name": "ELite Learning",
-    "myRole": "Backend",
-    "shortDes": "Elite Learning is an online training and learning platform.",
-    "startDate": "12/2022",
-    "endDate": "08/2023",
-    "descriptions": [
-      "Meet with the team to analyze the feature.",
-      "Develop the feature for managing quizzes in a course.",
-      "Test and maintain existing features."
+      "JavaScript", "Express.js", "Async.js", "Mongoose", "MongoDB", "Angular.js", "Bootstrap", "Linux", "Agenda.js", "PM2"
     ],
-    "keyTechs": [
-      "Python", "Django", "Django REST Framework", "MySQL", "Docker", "Pytest"
-    ]
+    "teamsize": 3
   },
   {
     "name": "Mark Platform",
-    "myRole": "Backend",
-    "shortDes": "The Mark Platform is a review and discovery platform for interior designers in Singapore.",
+    "myRole": "Back-end",
+    "shortDes": "Mark Platform is a platform that connects homeowners with top-rated interior designers in Singapore.",
     "startDate": "08/2022",
-    "endDate": "02/2024",
+    "endDate": "06/2023",
     "descriptions": [
       "Create middleware to dynamically authorize user roles.",
-      "Use FastAPI to develop APIs and test it with Pytest.",
-      "Integrate Stripe payment APIs into the subscription system.",
-      "Configure Gitlab CI/CD for automatic deployment using Docker on a DigitalOcean Droplet.",
-      "Set up zero downtime deployment for the system using Docker Compose and Nginx."
+      "Use FastAPI to develop APIs and create automated tests with Pytest.",
+      "Integrate Stripe Payments API to create a subscription system.",
+      "Configure CI/CD pipeline for automatic deployment using Docker, and Nginx on a DigitalOcean Droplet."
     ],
     "keyTechs": [
-      "Python", "FastAPI", "PostgreSQL", "Docker", "Nginx", "Shell Script", "SQLAlchemy", "Pytest", "Firebase"
-    ]
+      "Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Pytest", "Firebase", "Docker", "Nginx", "GitLab CI/CD", "Shell Script"
+    ],
+    "teamsize": 6
   }
 ]

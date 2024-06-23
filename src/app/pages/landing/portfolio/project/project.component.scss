@@ -10,16 +10,22 @@
     margin-bottom: 0.25rem;
   }
 
-  .project-descriptions {
-    padding: 0.25rem 0rem 0.25rem 1.25rem;
+  .project-responsibilities {
+    padding: 0.5rem 0rem 0rem;
+
   }
 
-  .project-key-techs {
+  .project-descriptions {
+    padding: 0rem 0rem 0.25rem 1.25rem;
+  }
+
+  .project-key-techs, .project-teamsize {
+    padding: 0.25rem 0rem 0rem;
     display: flex;
     flex-wrap: wrap;
   }
 }
 
 .projects:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }

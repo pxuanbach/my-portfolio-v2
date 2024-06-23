@@ -11,19 +11,24 @@
       <div class="project-short-des">
         <p [innerHTML]="project.shortDes"></p>
       </div>
-      <div class="project-descriptions">
-        <ul>
+      <div class="project-responsibilities">
+        <h4 class="title">Responsibilities:</h4>
+        <ul class="project-descriptions">
           <li *ngFor="let des of project.descriptions">
             <p [innerHTML]="des"></p>
           </li>
         </ul>
       </div>
       <div class="project-key-techs">
-        <p><b>Technologies:</b>&nbsp;</p> 
+        <h4>Technologies:&nbsp;</h4>
         <div *ngFor="let tech of project.keyTechs; index as i;">
           <p *ngIf="i < project.keyTechs.length - 1">{{ tech }},&nbsp;</p>
           <p *ngIf="i === project.keyTechs.length - 1">{{ tech }}.</p>
         </div>
+      </div>
+      <div class="project-teamsize">
+        <h4>Team size:&nbsp;</h4>
+        <p>{{ project.teamsize }}</p>
       </div>
     </div>
   </div>

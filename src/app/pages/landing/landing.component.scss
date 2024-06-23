@@ -1,12 +1,17 @@
 @use '../../../base' as base;
 
+* {
+  font-family: base.$primary-font-family;
+  color: base.$normal-text-color;
+  background-color: base.$background-color;
+}
+
 .container {
   display: block;
   height: auto;
+}
 
-  * {
-    font-family: base.$primary-font-family;
-    color: base.$normal-text-color;
-    background-color: base.$background-color;
-  }
+footer {
+  text-align: center;
+  margin-bottom: 1rem;
 }

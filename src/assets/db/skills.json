@@ -20,15 +20,11 @@
     "keyName": "Python Framework/Library",
     "relatedTechs": [
       {
-        "name": "FastAPI",
-        "level": 4
-      },
-      {
         "name": "Django",
         "level": 4
       },
       {
-        "name": "Django REST Framework",
+        "name": "FastAPI",
         "level": 4
       },
       {
@@ -53,16 +49,24 @@
         "level": 3
       }, 
       {
-        "name": "Angular.js",
-        "level": 3
-      }, 
+        "name": "Meteor.js",
+        "level": 2
+      },
       {
         "name": "Angular",
         "level": 3
       }, 
       {
-        "name": "Meteor.js",
-        "level": 2
+        "name": "Async.js",
+        "level": 3
+      }, 
+      {
+        "name": "Mongoose",
+        "level": 3
+      }, 
+      {
+        "name": "Prisma",
+        "level": 3
       }
     ]
   },
@@ -71,10 +75,6 @@
     "relatedTechs": [
       {
         "name": "PostgreSQL",
-        "level": 4
-      },
-      {
-        "name": "MySQL",
         "level": 4
       },
       {
@@ -91,7 +91,7 @@
     "keyName": "Cloud",
     "relatedTechs": [
       {
-        "name": "AWS EC2, Lightsail, S3",
+        "name": "AWS EC2, S3",
         "level": 3
       }, 
       {
