@@ -10,9 +10,22 @@ jobs:
 
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag pxuanbach/my-portfolio-v2:$(date +%s) --tag pxuanbach/my-portfolio-v2:latest
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Log into registry 
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+      - name: Build and push Client
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: pxuanbach/my-portfolio-v2:latest, pxuanbach/my-portfolio-v2:${{ github.run_number }}
