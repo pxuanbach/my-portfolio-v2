@@ -6,9 +6,10 @@
     "startDate": "08/2023",
     "endDate": "Present",
     "descriptions": [
-      "Develop APIs for a new module using Express.js and Prisma, ensuring data integrity with thorough testing.",
-      "Configure CI/CD pipeline to deploy product to staging and production environments with Docker.",
-      "Implement scheduled database backup using a Shell Script service within a Docker container."
+      "Developed RESTful APIs for a new module using Express.js and Prisma, ensuring data integrity with thorough testing.",
+      "Implemented Stripe payments and business logic to create custom subscription plans.",
+      "Configured CI/CD pipeline to deploy the product to staging and production environments using GitLab CI/CD, and Docker.",
+      "Created a scheduled database backup strategy with Shell Script for self-deployed MongoDB."
     ],
     "keyTechs": [
       "JavaScript", "TypeScript", "Meteor.js", "Express.js", "Prisma", "MongoDB", "Docker", "GitLab CI/CD", "Shell Script", "AWS S3"
@@ -22,10 +23,10 @@
     "startDate": "11/2022",
     "endDate": "Present",
     "descriptions": [
-      "Discuss with the team, analyze the feature, and review other open-source projects.",
-      "Develop core features of an e-commerce module, including Orders, Products, and Payments.",
-      "Setup Nginx as an API Gateway and Load Balancer.",
-      "Integrate Payment (VNPay, Momo, Stripe) and Shipping (GHTK, GHN) services into the system."
+      "Conducted in-depth analysis and research on popular Open-source platforms to plan and break down features.",
+      "Leveraged my expertise in Python, FastAPI and PostgreSQL to build a scalable and high-performance e-commerce module that seamlessly integrates with existing systems.",
+      "Configured Nginx as a scalable API Gateway and Load Balancer, following best practices to ensure security, and optimal performance.",
+      "Established a seamless integration for diverse payment gateways (VNPay, Momo, Stripe) and shipping providers (GHTK, GHN) within the system."
     ],
     "keyTechs": [
       "Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "Docker", "Nginx", "Pytest", "GitLab CI/CD", "AWS EC2"
