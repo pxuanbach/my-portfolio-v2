@@ -24,6 +24,7 @@ export class NavbarComponent {
   name: string = "";
   country: string = "";
   email: string = "";
+  position: string = "";
   phoneNumber: string = "";
   socials: Array<Social> = [];
   aboutMe: string[] = []
@@ -42,6 +43,7 @@ export class NavbarComponent {
       .subscribe(([basicDetail, socials]: [BasicDetail, Social[]]) => {
         this.name = basicDetail.name;
         this.country = basicDetail.country;
+        this.position = basicDetail.position;
         this.email = basicDetail.email;
         this.phoneNumber = basicDetail.phoneNumber;
         this.aboutMe = basicDetail.aboutMe;

@@ -1,7 +1,7 @@
 [
   {
     "name": "Iyyara & Halalfoodhunt",
-    "myRole": "Back-end",
+    "myRole": "Back-end Engineer",
     "shortDes": "Iyyara & Halalfoodhunt is an app from Singapore that verifies halal food options (eateries, online businesses, food vendors, etc.) before publishing them.",
     "startDate": "08/2023",
     "endDate": "Present",
@@ -12,13 +12,13 @@
       "Created a scheduled database backup strategy with Shell Script for self-deployed MongoDB."
     ],
     "keyTechs": [
-      "JavaScript, TypeScript, Express.js, Meteor.js, Prisma, MongoDB, Docker, Gitlab CI/CD, Shell Script, AWS S3"
+      "JavaScript, TypeScript, Express.js, Meteor.js, Prisma, MongoDB, Docker, GitLab CI/CD, Shell Script, AWS S3"
     ],
     "teamsize": 7
   },
   {
     "name": "Tico E-commerce",
-    "myRole": "Back-end",
+    "myRole": "Back-end Engineer",
     "shortDes": "Tico E-commerce is a set of commerce tools and modules that can be used to build unique commerce experiences.",
     "startDate": "11/2022",
     "endDate": "Present",
@@ -35,7 +35,7 @@
   },
   {
     "name": "Early Parrot",
-    "myRole": "Full-stack",
+    "myRole": "Full-stack Engineer",
     "shortDes": "EarlyParrot is a <b>SaaS</b> referral marketing platform from Malta that includes marketing automation tools, tracking and analytics features.",
     "startDate": "07/2023",
     "endDate": "02/2024",
@@ -52,7 +52,7 @@
   },
   {
     "name": "Mark Platform",
-    "myRole": "Back-end",
+    "myRole": "Back-end Engineer",
     "shortDes": "Mark Platform is a platform that connects homeowners with top-rated interior designers in Singapore.",
     "startDate": "08/2022",
     "endDate": "06/2023",

@@ -4,6 +4,7 @@
       <a href="#">{{ name }}</a>
     </h1>
     <div class="card-intro">
+      <p *ngIf="position !== ''"><b>{{ position }}</b></p>
       <p *ngIf="country !== ''">{{ country }}</p>
       <p *ngIf="phoneNumber !== ''">{{ phoneNumber }}</p>
       <p *ngIf="email !== ''"><a href="{{'mailto:' + email}}">{{ email }}</a></p>

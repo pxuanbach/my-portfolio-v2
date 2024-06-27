@@ -18,7 +18,6 @@ import { Project } from '../@data/dto/projects';
 
 (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
 
-
 @Injectable({ providedIn: 'root' })
 export class PdfService {
   styles: any = {};
@@ -29,6 +28,8 @@ export class PdfService {
   heading2LineHeight: number = 1.2;
   heading3LineHeight: number = 1.2;
   normalTextLineHeight: number = 1.1;
+  heading3Color: string = "#494949";
+  normalTextColor: string = "#393939";
 
   constructor(
     private basicDetailService: BasicDetailService,
@@ -43,6 +44,8 @@ export class PdfService {
     this.heading2LineHeight = environment.pdfHeading2LineHeight;
     this.heading3LineHeight = environment.pdfHeading3LineHeight;
     this.normalTextLineHeight = environment.pdfNormalTextLineHeight;
+    this.heading3Color = environment.pdfHeading3Color;
+    this.normalTextColor = environment.pdfNormalTextColor;
     forkJoin([
       this.basicDetailService.getBasicDetail(),
       this.educationsService.getEducations(),
@@ -89,28 +92,52 @@ export class PdfService {
 
   //#region Generate content section
   generateIntroSection(basicDetail: BasicDetail) {
-    const temp = [
+    const col1 = [
       {
         text: basicDetail.name,
         style: 'h1',
       }
     ]
+    if (basicDetail.position !== '') {
+      col1.push({
+        text: basicDetail.position,
+        style: 'normalText'
+      })
+    }
 
+    const col2 = []
+    if (basicDetail.phoneNumber !== '') {
+      col2.push({
+        text: basicDetail.phoneNumber,
+        style: 'normalText',
+      })
+    }
     if (basicDetail.email !== '') {
-      temp.push({
+      col2.push({
         text: basicDetail.email,
         style: 'normalText',
       })
     }
-
     if (basicDetail.country !== '') {
-      temp.push({
+      col2.push({
         text: basicDetail.country,
         style: 'normalText',
       })
     }
 
-    return temp;
+    return [
+      {
+        margin: [0, 0, 0, this.sectionMarginBottom],
+        columns: [
+          {
+            stack: col1
+          },
+          {
+            stack: col2
+          }
+        ]
+      }
+    ];
   }
 
   generateEducationSection(educations: Education[]) {
@@ -373,13 +400,13 @@ export class PdfService {
         fontSize: environment.pdfNormalFontSize,
         bold: true,
         lineHeight: this.heading3LineHeight,
-        color: '#494949',
+        color: this.heading3Color,
       },
       normalText: {
         fontSize: environment.pdfNormalFontSize,
         lineHeight: this.normalTextLineHeight,
         alignment: 'justify',
-        color: '#666666',
+        color: this.normalTextColor
       },
     };
   }

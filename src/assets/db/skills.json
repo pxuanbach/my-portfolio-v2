@@ -65,6 +65,10 @@
         "level": 3
       }, 
       {
+        "name": "Agenda.js",
+        "level": 3
+      }, 
+      {
         "name": "Mongoose",
         "level": 3
       }, 
@@ -87,6 +91,10 @@
       }, 
       {
         "name": "SQL Server",
+        "level": 3
+      },
+      {
+        "name": "Redis",
         "level": 3
       }
     ]
@@ -112,7 +120,7 @@
         "level": 4
       },
       {
-        "name": "Gitlab CI/CD",
+        "name": "GitLab CI/CD",
         "level": 4
       },
       {

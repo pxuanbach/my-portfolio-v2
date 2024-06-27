@@ -9,6 +9,7 @@ export class BasicDetailService extends BasicDetailData {
   name: string = BasicDetailJson.name;
   country: string = BasicDetailJson.country;
   phoneNumber: string = BasicDetailJson.phoneNumber;
+  position: string = BasicDetailJson.position;
   email: string = BasicDetailJson.email;
   aboutMe: string[] = BasicDetailJson.aboutMe;
 
@@ -16,6 +17,7 @@ export class BasicDetailService extends BasicDetailData {
     return of({
       name: this.name,
       country: this.country,
+      position: this.position,
       phoneNumber: this.phoneNumber,
       email: this.email,
       aboutMe: this.aboutMe,
