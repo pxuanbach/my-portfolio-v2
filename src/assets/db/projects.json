@@ -12,7 +12,7 @@
       "Created a scheduled database backup strategy with Shell Script for self-deployed MongoDB."
     ],
     "keyTechs": [
-      "JavaScript", "TypeScript", "Meteor.js", "Express.js", "Prisma", "MongoDB", "Docker", "GitLab CI/CD", "Shell Script", "AWS S3"
+      "JavaScript, TypeScript, Express.js, Meteor.js, Prisma, MongoDB, Docker, Gitlab CI/CD, Shell Script, AWS S3"
     ],
     "teamsize": 7
   },
@@ -29,7 +29,7 @@
       "Established a seamless integration for diverse payment gateways (VNPay, Momo, Stripe) and shipping providers (GHTK, GHN) within the system."
     ],
     "keyTechs": [
-      "Python", "FastAPI", "SQLAlchemy", "PostgreSQL", "Docker", "Nginx", "Pytest", "GitLab CI/CD", "AWS EC2"
+      "Python, FastAPI, SQLAlchemy, PostgreSQL, Docker, Nginx, Pytest, Gitlab CI/CD, AWS EC2"
     ],
     "teamsize": 8
   },
@@ -40,13 +40,13 @@
     "startDate": "07/2023",
     "endDate": "02/2024",
     "descriptions": [
-      "Build the UI using AngularJS and Bootstrap to provide a smooth experience.",
-      "Develop features to support clients in tracking their referral numbers.",
-      "Develop data synchronization features and ensure the consistency of user data from various SaaS providers.",
-      "Resolve race conditions in existing features and during large data synchronization."
+      "Leveraged Angular.js and Bootstrap to craft an intuitive user interface, ensuring a seamless user experience.",
+      "Developed complex features with Express.js to track marketing campaign metrics, empowering users to analyze campaign effectiveness.",
+      "Built robust data synchronization mechanisms with Agenda.js to guarantee user data integrity across diverse SaaS ecosystems.",
+      "Addressed race condition occurrences within legacy features and during concurrent data synchronization."
     ],
     "keyTechs": [
-      "JavaScript", "Express.js", "Async.js", "Mongoose", "MongoDB", "Angular.js", "Bootstrap", "Linux", "Agenda.js", "PM2"
+      "JavaScript, Express.js, Angular.js, MongoDB, Async.js, Agenda.js, Mongoose, Bootstrap, Linux, PM2"
     ],
     "teamsize": 3
   },
@@ -57,13 +57,13 @@
     "startDate": "08/2022",
     "endDate": "06/2023",
     "descriptions": [
-      "Create middleware to dynamically authorize user roles.",
-      "Use FastAPI to develop APIs and create automated tests with Pytest.",
-      "Integrate Stripe Payments API to create a subscription system.",
-      "Configure CI/CD pipeline for automatic deployment using Docker, and Nginx on a DigitalOcean Droplet."
+      "Developed middleware to dynamically authenticate user roles based on API endpoints.",
+      "Employed FastAPI to expedite RESTful API development and bolstered code quality through automated testing with Pytest.",
+      "Incorporated Stripe Payments API to establish a robust subscription system.",
+      "Implemented a CI/CD pipeline on GitLab CI/CD for automated deployments utilizing Docker and Nginx on a DigitalOcean Droplet."
     ],
     "keyTechs": [
-      "Python", "FastAPI", "PostgreSQL", "SQLAlchemy", "Pytest", "Firebase", "Docker", "Nginx", "GitLab CI/CD", "Shell Script"
+      "Python, FastAPI, PostgreSQL, SQLAlchemy, Pytest, Firebase, Docker, Nginx, GitLab CI/CD, Shell Script"
     ],
     "teamsize": 6
   }

@@ -32,6 +32,10 @@
         "level": 4
       },
       {
+        "name": "Pytest",
+        "level": 3
+      },
+      {
         "name": "APScheduler",
         "level": 3
       },
