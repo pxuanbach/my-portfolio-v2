@@ -365,7 +365,7 @@ export class PdfService {
 
   generatePersonalProjectsSection(personalProject: PersonalProject[]) {
     const temp: Array<any> = [
-      this.outlineTitle('personal projects'),
+      this.outlineTitle('personal Projects'),
       this.separator(),
     ];
 
