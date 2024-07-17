@@ -10,6 +10,7 @@ import { EducationsService } from '../../@data/educations.service';
 import { SkillsService } from '../../@data/skills.service';
 import { ExperiencesService } from '../../@data/experiences.service';
 import { ProjectsService } from '../../@data/projects.service';
+import { PersonalProjectsService } from '../../@data/personal-projects.service';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ProjectsService } from '../../@data/projects.service';
     EducationsService,
     SkillsService,
     ExperiencesService,
-    ProjectsService
+    ProjectsService,
+    PersonalProjectsService
   ]
 })
 export class PdfViewModule { }

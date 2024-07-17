@@ -12,24 +12,25 @@
       "Created a scheduled database backup strategy with Shell Script for self-deployed MongoDB."
     ],
     "keyTechs": [
-      "JavaScript, TypeScript, Express.js, Meteor.js, Prisma, MongoDB, Docker, GitLab CI/CD, Shell Script, AWS S3"
+      "Express.js, Meteor.js, Prisma, MongoDB, Docker, GitLab CI/CD, Shell Script, AWS S3"
     ],
     "teamsize": 7
   },
   {
     "name": "Tico E-commerce",
     "myRole": "Back-end Engineer",
-    "shortDes": "Tico E-commerce is a set of commerce tools and modules that can be used to build unique commerce experiences.",
+    "shortDes": "Tico E-commerce is an in-house product, a set of commerce tools and modules that can be used to build unique commerce experiences.",
     "startDate": "11/2022",
     "endDate": "Present",
     "descriptions": [
       "Conducted in-depth analysis and research on popular Open-source platforms to plan and break down features.",
       "Leveraged my expertise in Python, FastAPI and PostgreSQL to build a scalable and high-performance e-commerce module that seamlessly integrates with existing systems.",
+      "Guided newly joined engineers, facilitating their integration into the project quickly.",
       "Configured Nginx as a scalable API Gateway and Load Balancer, following best practices to ensure security, and optimal performance.",
       "Established a seamless integration for diverse payment gateways (VNPay, Momo, Stripe) and shipping providers (GHTK, GHN) within the system."
     ],
     "keyTechs": [
-      "Python, FastAPI, SQLAlchemy, PostgreSQL, Docker, Nginx, Pytest, Gitlab CI/CD, AWS EC2"
+      "FastAPI, PostgreSQL, Redis, SQLAlchemy, APScheduler, Pytest, GitLab CI/CD, Docker, Nginx, AWS EC2"
     ],
     "teamsize": 8
   },
@@ -46,7 +47,7 @@
       "Addressed race condition occurrences within legacy features and during concurrent data synchronization."
     ],
     "keyTechs": [
-      "JavaScript, Express.js, Angular.js, MongoDB, Async.js, Agenda.js, Mongoose, Bootstrap, Linux, PM2"
+      "Express.js, MongoDB, Redis, Angular.js, Async.js, Agenda.js, Mongoose, Bootstrap, Linux, PM2"
     ],
     "teamsize": 3
   },
@@ -63,7 +64,7 @@
       "Implemented a CI/CD pipeline on GitLab CI/CD for automated deployments utilizing Docker and Nginx on a DigitalOcean Droplet."
     ],
     "keyTechs": [
-      "Python, FastAPI, PostgreSQL, SQLAlchemy, Pytest, Firebase, Docker, Nginx, GitLab CI/CD, Shell Script"
+      "FastAPI, PostgreSQL, SQLAlchemy, APScheduler, FastAPI Users, Pytest, Firebase, Docker, Nginx, GitLab CI/CD, Shell Script"
     ],
     "teamsize": 6
   }

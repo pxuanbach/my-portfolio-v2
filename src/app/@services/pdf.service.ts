@@ -9,12 +9,14 @@ import { BasicDetailService } from '../@data/basic-detail.service';
 import { ExperiencesService } from '../@data/experiences.service';
 import { SkillsService } from '../@data/skills.service';
 import { ProjectsService } from '../@data/projects.service';
+import { PersonalProjectsService } from '../@data/personal-projects.service';
 
 import { BasicDetail } from '../@data/dto/basic-detail';
 import { Education } from '../@data/dto/educations';
 import { Experience } from '../@data/dto/experiences';
 import { Skill } from '../@data/dto/skills';
 import { Project } from '../@data/dto/projects';
+import { PersonalProject } from '../@data/dto/personal-projects';
 
 (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
 
@@ -28,15 +30,16 @@ export class PdfService {
   heading2LineHeight: number = 1.2;
   heading3LineHeight: number = 1.2;
   normalTextLineHeight: number = 1.1;
-  heading3Color: string = "#494949";
-  normalTextColor: string = "#393939";
+  heading3Color: string = '#494949';
+  normalTextColor: string = '#393939';
 
   constructor(
     private basicDetailService: BasicDetailService,
     private educationsService: EducationsService,
     private experiencesService: ExperiencesService,
     private skillsService: SkillsService,
-    private projectsService: ProjectsService
+    private projectsService: ProjectsService,
+    private personalProjectsService: PersonalProjectsService
   ) {
     this.outlineMarginTop = environment.pdfOutlineMarginTop;
     this.sectionMarginBottom = environment.pdfSectionMarginBottom;
@@ -51,16 +54,25 @@ export class PdfService {
       this.educationsService.getEducations(),
       this.experiencesService.getExperiences(),
       this.skillsService.getSkills(),
-      this.projectsService.getProjects()
+      this.projectsService.getProjects(),
+      this.personalProjectsService.getPersonalProjects(),
     ])
       .pipe()
       .subscribe(
-        ([basicDetail, educations, experiences, skills, projects]: [
+        ([
+          basicDetail,
+          educations,
+          experiences,
+          skills,
+          projects,
+          personalProjects,
+        ]: [
           BasicDetail,
           Education[],
           Experience[],
           Skill[],
-          Project[]
+          Project[],
+          PersonalProject[]
         ]) => {
           this.content = [
             {
@@ -83,6 +95,10 @@ export class PdfService {
               nodeName: 'Projects',
               stack: this.generateProjectsSection(projects),
             },
+            {
+              nodeName: 'Personal Projects',
+              stack: this.generatePersonalProjectsSection(personalProjects),
+            },
           ];
         }
       );
@@ -96,33 +112,33 @@ export class PdfService {
       {
         text: basicDetail.name,
         style: 'h1',
-      }
-    ]
+      },
+    ];
     if (basicDetail.position !== '') {
       col1.push({
         text: basicDetail.position,
-        style: 'normalText'
-      })
+        style: 'normalText',
+      });
     }
 
-    const col2 = []
+    const col2 = [];
     if (basicDetail.phoneNumber !== '') {
       col2.push({
         text: basicDetail.phoneNumber,
         style: 'normalText',
-      })
+      });
     }
     if (basicDetail.email !== '') {
       col2.push({
         text: basicDetail.email,
         style: 'normalText',
-      })
+      });
     }
     if (basicDetail.country !== '') {
       col2.push({
         text: basicDetail.country,
         style: 'normalText',
-      })
+      });
     }
 
     return [
@@ -130,13 +146,13 @@ export class PdfService {
         margin: [0, 0, 0, this.sectionMarginBottom],
         columns: [
           {
-            stack: col1
+            stack: col1,
           },
           {
-            stack: col2
-          }
-        ]
-      }
+            stack: col2,
+          },
+        ],
+      },
     ];
   }
 
@@ -186,7 +202,10 @@ export class PdfService {
   }
 
   generateExperienceSection(experiences: Experience[]) {
-    const temp: Array<any> = [this.outlineTitle('experience'), this.separator()];
+    const temp: Array<any> = [
+      this.outlineTitle('experience'),
+      this.separator(),
+    ];
 
     experiences.forEach((exp) => {
       temp.push({
@@ -244,12 +263,16 @@ export class PdfService {
             text: [
               {
                 text: skill.keyName + ': ',
-                style: 'h3'
-              }, 
+                style: 'h3',
+              },
               {
-                text: skill.relatedTechs?.length > 0 ? skill.relatedTechs.map(tech => tech.name).join(', ') + '.' : '',
-              }
-            ]
+                text:
+                  skill.relatedTechs?.length > 0
+                    ? skill.relatedTechs.map((tech) => tech.name).join(', ') +
+                      '.'
+                    : '',
+              },
+            ],
           },
         ],
       });
@@ -257,15 +280,15 @@ export class PdfService {
     temp.push({
       margin: [0, 0, 0, this.sectionMarginBottom],
       style: 'nomalText',
-      stack: []
-    })
+      stack: [],
+    });
     return temp;
   }
 
   generateProjectsSection(projects: Project[]) {
     const temp: Array<any> = [this.outlineTitle('projects'), this.separator()];
-    
-    projects.forEach(proj => {
+
+    projects.forEach((proj) => {
       temp.push({
         margin: [0, 0, 0, this.sectionMarginBottom],
         style: 'normalText',
@@ -308,33 +331,84 @@ export class PdfService {
             stack: [
               {
                 text: 'Responsibilities: ',
-                bold: true
+                bold: true,
               },
               {
                 ul: proj.descriptions,
-              }
-            ]
+              },
+            ],
           },
           {
             text: [
               {
                 text: 'Technologies: ',
-                bold: true
+                bold: true,
               },
-              proj.keyTechs.join(', ')
-            ]
+              proj.keyTechs.join(', '),
+            ],
           },
           {
             text: [
               {
                 text: 'Team size: ',
-                bold: true
+                bold: true,
               },
-              proj.teamsize
-            ]
-          }
-        ]
-      })
+              proj.teamsize,
+            ],
+          },
+        ],
+      });
+    });
+
+    return temp;
+  }
+
+  generatePersonalProjectsSection(personalProject: PersonalProject[]) {
+    const temp: Array<any> = [
+      this.outlineTitle('personal projects'),
+      this.separator(),
+    ];
+
+    personalProject.forEach((proj) => {
+      temp.push({
+        margin: [0, 0, 0, this.sectionMarginBottom],
+        style: 'normalText',
+        stack: [
+          {
+            columns: [
+              {
+                width: '*',
+                alignment: 'left',
+                stack: [
+                  {
+                    text: [
+                      proj.name + ', ',
+                      {
+                        text: proj.url,
+                        italics: true,
+                      },
+                    ],
+                    style: 'h3',
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            text: this.htmlText(proj.shortDes),
+            italics: true,
+          },
+          {
+            text: [
+              {
+                text: 'Technologies: ',
+                bold: true,
+              },
+              proj.keyTechs.join(', '),
+            ],
+          },
+        ],
+      });
     })
 
     return temp;
@@ -377,9 +451,9 @@ export class PdfService {
   }
 
   htmlText(html: string) {
-    var div = document.createElement("div");
+    var div = document.createElement('div');
     div.innerHTML = html;
-    var text = div.textContent || div.innerText || "";
+    var text = div.textContent || div.innerText || '';
     return text;
   }
   //#endregion
@@ -406,7 +480,7 @@ export class PdfService {
         fontSize: environment.pdfNormalFontSize,
         lineHeight: this.normalTextLineHeight,
         alignment: 'justify',
-        color: this.normalTextColor
+        color: this.normalTextColor,
       },
     };
   }
