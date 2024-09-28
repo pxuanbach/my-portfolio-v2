@@ -1,0 +1,144 @@
+[
+  {
+    "keyName": "Programming Language",
+    "relatedTechs": [
+      {
+        "name": "Python",
+        "level": 4
+      },
+      {
+        "name": "JavaScript",
+        "level": 3
+      },
+      {
+        "name": "TypeScript",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "keyName": "Python Framework/Library",
+    "relatedTechs": [
+      {
+        "name": "Django",
+        "level": 4
+      },
+      {
+        "name": "FastAPI",
+        "level": 4
+      },
+      {
+        "name": "SQLAlchemy",
+        "level": 4
+      },
+      {
+        "name": "Pytest",
+        "level": 3
+      },
+      {
+        "name": "APScheduler",
+        "level": 3
+      },
+      {
+        "name": "FastAPI Users",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "keyName": "Node.js Framework/Library",
+    "relatedTechs": [
+      {
+        "name": "Express.js",
+        "level": 3
+      }, 
+      {
+        "name": "Meteor.js",
+        "level": 2
+      },
+      {
+        "name": "Angular",
+        "level": 3
+      }, 
+      {
+        "name": "Async.js",
+        "level": 3
+      }, 
+      {
+        "name": "Agenda.js",
+        "level": 3
+      }, 
+      {
+        "name": "Mongoose",
+        "level": 3
+      }, 
+      {
+        "name": "Prisma",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "keyName": "Database",
+    "relatedTechs": [
+      {
+        "name": "PostgreSQL",
+        "level": 4
+      },
+      {
+        "name": "MongoDB",
+        "level": 4
+      }, 
+      {
+        "name": "SQL Server",
+        "level": 3
+      },
+      {
+        "name": "Redis",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "keyName": "Cloud",
+    "relatedTechs": [
+      {
+        "name": "AWS EC2, S3",
+        "level": 3
+      }, 
+      {
+        "name": "Digital Ocean Droplet",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "keyName": "Others",
+    "relatedTechs": [
+      {
+        "name": "Docker",
+        "level": 4
+      },
+      {
+        "name": "GitLab CI/CD",
+        "level": 4
+      },
+      {
+        "name": "Github Actions",
+        "level": 3
+      },
+      {
+        "name": "Linux",
+        "level": 3
+      },
+      {
+        "name": "Bash, Shell Script",
+        "level": 3
+      },
+      {
+        "name": "Nginx",
+        "level": 2
+      }
+    ]
+  }
+]
