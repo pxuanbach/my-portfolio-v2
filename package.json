@@ -5,13 +5,15 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration --base-href https://portfolio.pxuanbach.id.vn/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-image": "docker build -t pxuanbach/my-portfolio-v2 .",
     "push-image": "docker push pxuanbach/my-portfolio-v2",
     "up": "docker compose up -d",
     "down": "docker compose down",
-    "pull": "docker compose pull"
+    "pull": "docker compose pull",
+    "deploy:ghpages": "ng deploy --cname=portfolio.pxuanbach.id.vn --repo=https://github.com/pxuanbach/my-portfolio-v2.git"
   },
   "private": true,
   "dependencies": {
@@ -25,6 +27,7 @@
     "@angular/router": "^17.0.0",
     "@fortawesome/fontawesome-free": "^6.5.1",
     "@popperjs/core": "^2.11.8",
+    "angular-cli-ghpages": "^2.0.1",
     "ngx-extended-pdf-viewer": "^19.4.0-alpha.2",
     "pdfmake": "^0.2.9",
     "rxjs": "~7.8.0",
