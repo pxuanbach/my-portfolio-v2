@@ -100,10 +100,14 @@ $breakpoints: (
 
     .navbar {
       max-width: 384px !important;
+      position: fixed !important;
+      transition: all 0.5s ease !important;
     }
 
     .portfolio {
       max-width: 896px !important;
+      margin: 0 0 0 384px !important;
+      transition: all 0.5s ease-in !important;
     }
   }
 }

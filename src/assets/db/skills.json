@@ -113,6 +113,27 @@
     ]
   },
   {
+    "keyName": "AI Tools",
+    "relatedTechs": [
+      {
+        "name": "Claude Code",
+        "level": 4
+      },
+      {
+        "name": "Github Copilot",
+        "level": 4
+      },
+      {
+        "name": "Hermes Agent",
+        "level": 3
+      },
+      {
+        "name": "Pi Coding Agent",
+        "level": 3
+      }
+    ]
+  },
+  {
     "keyName": "Others",
     "relatedTechs": [
       {
