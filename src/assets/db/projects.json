@@ -1,15 +1,63 @@
 [
   {
+    "name": "Doc Compare & Highlight Agent",
+    "myRole": "Full-stack Engineer",
+    "shortDes": "Doc Compare & Highlight Agent is an agentic workflow that agents can read documents, then compare and highlight differences between documents and user queries.",
+    "startDate": "07/2026",
+    "endDate": "Present",
+    "descriptions": [
+      "Built harness workflows alongside team members to streamline the agent's SDLC execution.",
+      "Designed and implemented the agent's core logic for comparison and highlighting—optimizing system prompt, user query, workflow, and tool use.",
+      "Tuned the AI Agent's performance using FastAPI and Strands Agents, with batch processing and parallel execution."
+    ],
+    "keyTechs": [
+      "FastAPI, Strands Agents, Next.js, Pytest, Supabase, Vercel, Github Copilot, PI"
+    ],
+    "teamsize": 3
+  },
+  {
+    "name": "Realtendant 2",
+    "myRole": "Full-stack Engineer",
+    "shortDes": "Realtendant is a digital grading and evaluation system developed for elementary, middle, and high schools.",
+    "startDate": "11/2025",
+    "endDate": "06/2026",
+    "descriptions": [
+      "Analyzed requirements for a legacy module and refactored it using Nest.js with TypeORM, PostgreSQL to align with new standards.",
+      "Rapidly investigated and fixed legacy bugs end-to-end, from reproduction to evidence-backed PRs, under tight timelines.",
+      "Monitored logs and system health; audited security risks across APIs (authorization bypass) and legacy encryption standards.",
+      "Coordinated with cross-team engineers to align on root causes and solutions."
+    ],
+    "keyTechs": [
+      "Nest.js, PostgreSQL, TypeORM, Next.js, Keycloak, Docker, Azure Storage, Github Copilot"
+    ],
+    "teamsize": 10
+  },
+  {
+    "name": "Toiro",
+    "myRole": "Full-stack Engineer",
+    "shortDes": "Toiro is a B2B-focused matching platform that connects system development companies with prime contracts.",
+    "startDate": "09/2024",
+    "endDate": "10/2025",
+    "descriptions": [
+      "Collaborated with team members to design API endpoints, database schemas, and UI components for a new module, ensuring seamless integration with existing systems.",
+      "Developed new module/system using FastAPI, Next.js and PostgreSQL, ensuring logical consistency and data integrity throughout Pytest.",
+      "Created scripts and guidelines to help AI Agent understand and develop the new module effectively."
+    ],
+    "keyTechs": [
+      "FastAPI, PostgreSQL, SQLAlchemy, Next.js, Pytest, Docker, Elasticsearch, Github Actions, Github Copilot"
+    ],
+    "teamsize": 11
+  },
+  {
     "name": "Iyyara & Halalfoodhunt",
     "myRole": "Back-end Engineer",
     "shortDes": "Iyyara & Halalfoodhunt is an app from Singapore that verifies halal food options (eateries, online businesses, food vendors, etc.) before publishing them.",
     "startDate": "08/2023",
-    "endDate": "Present",
+    "endDate": "08/2024",
     "descriptions": [
       "Developed RESTful APIs for a new module using Express.js and Prisma, ensuring data integrity with thorough testing.",
       "Implemented Stripe payments and business logic to create custom subscription plans.",
-      "Configured CI/CD pipeline to deploy the product to staging and production environments using GitLab CI/CD, and Docker.",
-      "Created a scheduled database backup strategy with Shell Script for self-deployed MongoDB."
+      "Configured GitLab CI/CD with Docker for staging/production deployments, plus a scheduled MongoDB backup strategy via Shell Script."
     ],
     "keyTechs": [
       "Express.js, Meteor.js, Prisma, MongoDB, Docker, GitLab CI/CD, Shell Script, AWS S3"
@@ -21,13 +69,11 @@
     "myRole": "Back-end Engineer",
     "shortDes": "Tico E-commerce is an in-house product, a set of commerce tools and modules that can be used to build unique commerce experiences.",
     "startDate": "11/2022",
-    "endDate": "Present",
+    "endDate": "08/2024",
     "descriptions": [
       "Conducted in-depth analysis and research on popular Open-source platforms to plan and break down features.",
       "Leveraged my expertise in Python, FastAPI and PostgreSQL to build a scalable and high-performance e-commerce module that seamlessly integrates with existing systems.",
-      "Guided newly joined engineers, facilitating their integration into the project quickly.",
-      "Configured Nginx as a scalable API Gateway and Load Balancer, following best practices to ensure security, and optimal performance.",
-      "Established a seamless integration for diverse payment gateways (VNPay, Momo, Stripe) and shipping providers (GHTK, GHN) within the system."
+      "Guided newly joined engineers, facilitating their integration into the project quickly."
     ],
     "keyTechs": [
       "FastAPI, PostgreSQL, Redis, SQLAlchemy, APScheduler, Pytest, GitLab CI/CD, Docker, Nginx, AWS EC2"
@@ -41,8 +87,7 @@
     "startDate": "07/2023",
     "endDate": "02/2024",
     "descriptions": [
-      "Leveraged Angular.js and Bootstrap to craft an intuitive user interface, ensuring a seamless user experience.",
-      "Developed complex features with Express.js to track marketing campaign metrics, empowering users to analyze campaign effectiveness.",
+      "Crafted intuitive UI with Angular.js and Bootstrap, and built campaign tracking features with Express.js.",
       "Built robust data synchronization mechanisms with Agenda.js to guarantee user data integrity across diverse SaaS ecosystems.",
       "Addressed race condition occurrences within legacy features and during concurrent data synchronization."
     ],
@@ -58,10 +103,8 @@
     "startDate": "08/2022",
     "endDate": "06/2023",
     "descriptions": [
-      "Developed middleware to dynamically authenticate user roles based on API endpoints.",
-      "Employed FastAPI to expedite RESTful API development and bolstered code quality through automated testing with Pytest.",
-      "Incorporated Stripe Payments API to establish a robust subscription system.",
-      "Implemented a CI/CD pipeline on GitLab CI/CD for automated deployments utilizing Docker and Nginx on a DigitalOcean Droplet."
+      "Built dynamic role-based auth middleware and RESTful APIs with FastAPI; ensured quality via Pytest.",
+      "Integrated Stripe subscriptions and set up CI/CD with Docker, Nginx on DigitalOcean via GitLab CI/CD."
     ],
     "keyTechs": [
       "FastAPI, PostgreSQL, SQLAlchemy, APScheduler, FastAPI Users, Pytest, Firebase, Docker, Nginx, GitLab CI/CD, Shell Script"

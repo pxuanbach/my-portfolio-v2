@@ -1,12 +1,22 @@
 [
   {
-    "companyName": "TiSoHa Software Solution",
-    "position": "Intern & Software Engineer",
-    "startDate": "07/2022",
+    "companyName": "SHIFT ASIA",
+    "position": "Full-stack Software Engineer",
+    "startDate": "09/2024",
     "endDate": "Present",
     "descriptions": [
       "Collaborated with senior engineers to develop new features and solve technical problems.",
       "Produced modern, high-performance, and maintainable code for a wide range of projects.",
+      "Learned and applied new agentic technologies and frameworks to improve the development process and enhance the quality of the products."
+    ]
+  },
+  {
+    "companyName": "TiSoHa Software Solution",
+    "position": "Intern & Software Engineer",
+    "startDate": "07/2022",
+    "endDate": "08/2024",
+    "descriptions": [
+      "Collaborated with senior engineers to develop new features and solve technical problems.",
       "Estimated and optimized the company's expenditures for cloud services.",
       "Trained new engineers on processes and technical skills to help them develop and confidently solve problems independently."
     ]

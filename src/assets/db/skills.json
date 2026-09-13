@@ -51,27 +51,23 @@
       {
         "name": "Express.js",
         "level": 3
-      }, 
-      {
-        "name": "Meteor.js",
-        "level": 2
       },
       {
         "name": "Angular",
         "level": 3
-      }, 
+      },
       {
         "name": "Async.js",
         "level": 3
-      }, 
+      },
       {
         "name": "Agenda.js",
         "level": 3
-      }, 
+      },
       {
         "name": "Mongoose",
         "level": 3
-      }, 
+      },
       {
         "name": "Prisma",
         "level": 3
@@ -88,7 +84,7 @@
       {
         "name": "MongoDB",
         "level": 4
-      }, 
+      },
       {
         "name": "SQL Server",
         "level": 3
@@ -105,9 +101,17 @@
       {
         "name": "AWS EC2, S3",
         "level": 3
-      }, 
+      },
       {
         "name": "Digital Ocean Droplet",
+        "level": 3
+      },
+      {
+        "name": "Supabase",
+        "level": 3
+      },
+      {
+        "name": "Vercel",
         "level": 3
       }
     ]
@@ -124,11 +128,11 @@
         "level": 4
       },
       {
-        "name": "Hermes Agent",
+        "name": "Pi Coding Agent",
         "level": 3
       },
       {
-        "name": "Pi Coding Agent",
+        "name": "Hermes Agent",
         "level": 3
       }
     ]
