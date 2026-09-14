@@ -17,7 +17,7 @@
     ]
   },
   {
-    "keyName": "Python Framework/Library",
+    "keyName": "Python Fw/Lib",
     "relatedTechs": [
       {
         "name": "Django",
@@ -32,21 +32,25 @@
         "level": 4
       },
       {
+        "name": "Pydantic",
+        "level": 4
+      },
+      {
         "name": "Pytest",
+        "level": 3
+      },
+      {
+        "name": "Strands Agents",
         "level": 3
       },
       {
         "name": "APScheduler",
         "level": 3
-      },
-      {
-        "name": "FastAPI Users",
-        "level": 3
       }
     ]
   },
   {
-    "keyName": "Node.js Framework/Library",
+    "keyName": "Node.js Fw/Lib",
     "relatedTechs": [
       {
         "name": "Express.js",

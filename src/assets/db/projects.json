@@ -7,7 +7,7 @@
     "endDate": "Present",
     "descriptions": [
       "Built harness workflows alongside team members to streamline the agent's SDLC execution.",
-      "Designed and implemented the agent's core logic for comparison and highlighting—optimizing system prompt, user query, workflow, and tool use.",
+      "Designed and implemented the agent's core logic for comparison and highlighting, optimizing system prompt, user query, workflow, and tool use.",
       "Tuned the AI Agent's performance using FastAPI and Strands Agents, with batch processing and parallel execution."
     ],
     "keyTechs": [
@@ -16,9 +16,9 @@
     "teamsize": 3
   },
   {
-    "name": "Realtendant 2",
+    "name": "Digital Grading and Evaluation System",
     "myRole": "Full-stack Engineer",
-    "shortDes": "Realtendant is a digital grading and evaluation system developed for elementary, middle, and high schools.",
+    "shortDes": "Digital Grading and Evaluation System is a digital solution developed for elementary, middle, and high schools.",
     "startDate": "11/2025",
     "endDate": "06/2026",
     "descriptions": [
@@ -33,9 +33,9 @@
     "teamsize": 10
   },
   {
-    "name": "Toiro",
+    "name": "B2B-focused matching platform",
     "myRole": "Full-stack Engineer",
-    "shortDes": "Toiro is a B2B-focused matching platform that connects system development companies with prime contracts.",
+    "shortDes": "B2B-focused matching platform connects system development companies with prime contracts.",
     "startDate": "09/2024",
     "endDate": "10/2025",
     "descriptions": [
