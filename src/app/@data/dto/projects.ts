@@ -7,7 +7,7 @@ export interface Project {
   startDate: string;
   endDate: string;
   descriptions: string[];
-  keyTechs: string[];
+  keyTechs?: string[];
   teamsize: number;
 }
 

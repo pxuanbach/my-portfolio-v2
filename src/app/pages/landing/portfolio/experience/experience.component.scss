@@ -14,6 +14,12 @@
     text-align: justify;
     padding: 0.25rem 0rem 0.5rem 1.25rem;
   }
+
+  .experience-key-techs {
+    padding: 0.25rem 0rem 0.5rem 0rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .experience:not(:last-child) {

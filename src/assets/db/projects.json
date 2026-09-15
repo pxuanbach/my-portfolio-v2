@@ -2,112 +2,84 @@
   {
     "name": "Doc Compare & Highlight Agent",
     "myRole": "Full-stack Engineer",
-    "shortDes": "Doc Compare & Highlight Agent is an agentic workflow that agents can read documents, then compare and highlight differences between documents and user queries.",
+    "shortDes": "Agentic workflow that reads documents to compare and highlight differences against user queries.",
     "startDate": "07/2026",
     "endDate": "Present",
     "descriptions": [
-      "Built harness workflows alongside team members to streamline the agent's SDLC execution.",
-      "Designed and implemented the agent's core logic for comparison and highlighting, optimizing system prompt, user query, workflow, and tool use.",
-      "Tuned the AI Agent's performance using FastAPI and Strands Agents, with batch processing and parallel execution."
-    ],
-    "keyTechs": [
-      "FastAPI, Strands Agents, Next.js, Pytest, Supabase, Vercel, Github Copilot, PI"
+      "Built an interactive visual diff and highlight interface in Next.js for document comparison results.",
+      "Optimized Strands Agents in FastAPI using context-aware routing, batch processing, and parallel execution."
     ],
     "teamsize": 3
   },
   {
     "name": "Digital Grading and Evaluation System",
     "myRole": "Full-stack Engineer",
-    "shortDes": "Digital Grading and Evaluation System is a digital solution developed for elementary, middle, and high schools.",
+    "shortDes": "Grading and evaluation platform developed for elementary, middle, and high schools.",
     "startDate": "11/2025",
     "endDate": "06/2026",
     "descriptions": [
-      "Analyzed requirements for a legacy module and refactored it using Nest.js with TypeORM, PostgreSQL to align with new standards.",
-      "Rapidly investigated and fixed legacy bugs end-to-end, from reproduction to evidence-backed PRs, under tight timelines.",
-      "Monitored logs and system health; audited security risks across APIs (authorization bypass) and legacy encryption standards.",
-      "Coordinated with cross-team engineers to align on root causes and solutions."
-    ],
-    "keyTechs": [
-      "Nest.js, PostgreSQL, TypeORM, Next.js, Keycloak, Docker, Azure Storage, Github Copilot"
+      "Refactored legacy evaluation modules using Next.js, Nest.js, and Keycloak RBAC.",
+      "Investigated and patched authorization bypass vulnerabilities and legacy encryption flaws."
     ],
     "teamsize": 10
   },
   {
-    "name": "B2B-focused matching platform",
+    "name": "B2B-focused Matching Platform",
     "myRole": "Full-stack Engineer",
-    "shortDes": "B2B-focused matching platform connects system development companies with prime contracts.",
+    "shortDes": "B2B platform that matches software development companies with prime contracts.",
     "startDate": "09/2024",
     "endDate": "10/2025",
     "descriptions": [
-      "Collaborated with team members to design API endpoints, database schemas, and UI components for a new module, ensuring seamless integration with existing systems.",
-      "Developed new module/system using FastAPI, Next.js and PostgreSQL, ensuring logical consistency and data integrity throughout Pytest.",
-      "Created scripts and guidelines to help AI Agent understand and develop the new module effectively."
-    ],
-    "keyTechs": [
-      "FastAPI, PostgreSQL, SQLAlchemy, Next.js, Pytest, Docker, Elasticsearch, Github Actions, Github Copilot"
+      "Built modular Next.js UI components integrated with Elasticsearch for contract matching.",
+      "Created prompt harnesses and guidelines for AI agents to generate system modules."
     ],
     "teamsize": 11
   },
   {
     "name": "Iyyara & Halalfoodhunt",
     "myRole": "Back-end Engineer",
-    "shortDes": "Iyyara & Halalfoodhunt is an app from Singapore that verifies halal food options (eateries, online businesses, food vendors, etc.) before publishing them.",
+    "shortDes": "Singapore-based directory that verifies and lists halal food businesses, eateries, and vendors.",
     "startDate": "08/2023",
     "endDate": "08/2024",
     "descriptions": [
-      "Developed RESTful APIs for a new module using Express.js and Prisma, ensuring data integrity with thorough testing.",
-      "Implemented Stripe payments and business logic to create custom subscription plans.",
-      "Configured GitLab CI/CD with Docker for staging/production deployments, plus a scheduled MongoDB backup strategy via Shell Script."
-    ],
-    "keyTechs": [
-      "Express.js, Meteor.js, Prisma, MongoDB, Docker, GitLab CI/CD, Shell Script, AWS S3"
+      "Migrated a monolithic Meteor.js application to Express.js and Next.js, improving page load speeds and code maintainability.",
+      "Wrote automated shell scripts to handle scheduled backups for self-hosted MongoDB instances."
     ],
     "teamsize": 7
   },
   {
     "name": "Tico E-commerce",
     "myRole": "Back-end Engineer",
-    "shortDes": "Tico E-commerce is an in-house product, a set of commerce tools and modules that can be used to build unique commerce experiences.",
+    "shortDes": "In-house toolkit of modular services and UI components for building custom e-commerce stores.",
     "startDate": "11/2022",
     "endDate": "08/2024",
     "descriptions": [
-      "Conducted in-depth analysis and research on popular Open-source platforms to plan and break down features.",
-      "Leveraged my expertise in Python, FastAPI and PostgreSQL to build a scalable and high-performance e-commerce module that seamlessly integrates with existing systems.",
-      "Guided newly joined engineers, facilitating their integration into the project quickly."
-    ],
-    "keyTechs": [
-      "FastAPI, PostgreSQL, Redis, SQLAlchemy, APScheduler, Pytest, GitLab CI/CD, Docker, Nginx, AWS EC2"
+      "Researched open-source platforms and implemented core catalog services in FastAPI.",
+      "Onboarded and mentored new engineers on team workflows and codebase conventions."
     ],
     "teamsize": 8
   },
   {
     "name": "Early Parrot",
     "myRole": "Full-stack Engineer",
-    "shortDes": "EarlyParrot is a <b>SaaS</b> referral marketing platform from Malta that includes marketing automation tools, tracking and analytics features.",
+    "shortDes": "Malta-based referral marketing SaaS featuring campaign automation, tracking, and analytics tools.",
     "startDate": "07/2023",
     "endDate": "02/2024",
     "descriptions": [
-      "Crafted intuitive UI with Angular.js and Bootstrap, and built campaign tracking features with Express.js.",
-      "Built robust data synchronization mechanisms with Agenda.js to guarantee user data integrity across diverse SaaS ecosystems.",
-      "Addressed race condition occurrences within legacy features and during concurrent data synchronization."
-    ],
-    "keyTechs": [
-      "Express.js, MongoDB, Redis, Angular.js, Async.js, Agenda.js, Mongoose, Bootstrap, Linux, PM2"
+      "Built referral tracking interfaces and campaign analytics dashboards with AngularJS and Bootstrap.",
+      "Resolved race conditions during concurrent data synchronizations across third-party SaaS platforms."
     ],
     "teamsize": 3
   },
   {
     "name": "Mark Platform",
     "myRole": "Back-end Engineer",
-    "shortDes": "Mark Platform is a platform that connects homeowners with top-rated interior designers in Singapore.",
+    "shortDes": "Singapore-based platform connecting homeowners with vetted interior designers.",
     "startDate": "08/2022",
     "endDate": "06/2023",
     "descriptions": [
-      "Built dynamic role-based auth middleware and RESTful APIs with FastAPI; ensured quality via Pytest.",
-      "Integrated Stripe subscriptions and set up CI/CD with Docker, Nginx on DigitalOcean via GitLab CI/CD."
-    ],
-    "keyTechs": [
-      "FastAPI, PostgreSQL, SQLAlchemy, APScheduler, FastAPI Users, Pytest, Firebase, Docker, Nginx, GitLab CI/CD, Shell Script"
+      "Built dynamic role-based authentication middleware and designer matching APIs in FastAPI.",
+      "Scoped new feature requirements with the product team, outlining technical constraints and implementation plans."
     ],
     "teamsize": 6
   }

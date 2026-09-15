@@ -13,6 +13,13 @@
           <li *ngFor="let des of experience.descriptions" [innerHTML]="des"></li>
         </ul>
       </div>
+      <div class="experience-key-techs" *ngIf="experience.keyTechs">
+        <h4>Technologies:&nbsp;</h4>
+        <div *ngFor="let tech of experience.keyTechs; index as i;">
+          <p *ngIf="i < experience.keyTechs.length - 1">{{ tech }},&nbsp;</p>
+          <p *ngIf="i === experience.keyTechs.length - 1">{{ tech }}.</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

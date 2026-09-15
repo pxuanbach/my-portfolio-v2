@@ -6,6 +6,7 @@ export interface Experience {
   startDate: string;
   endDate: string;
   descriptions: string[];
+  keyTechs?: string[];
 }
 
 export abstract class ExperiencesData {

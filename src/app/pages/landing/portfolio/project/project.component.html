@@ -19,7 +19,7 @@
           </li>
         </ul>
       </div>
-      <div class="project-key-techs">
+      <div class="project-key-techs" *ngIf="project.keyTechs">
         <h4>Technologies:&nbsp;</h4>
         <div *ngFor="let tech of project.keyTechs; index as i;">
           <p *ngIf="i < project.keyTechs.length - 1">{{ tech }},&nbsp;</p>

@@ -245,6 +245,19 @@ export class PdfService {
           {
             ul: exp.descriptions,
           },
+          ...(exp.keyTechs && exp.keyTechs.length > 0
+            ? [
+                {
+                  text: [
+                    {
+                      text: 'Technologies: ',
+                      bold: true,
+                    },
+                    exp.keyTechs.join(', '),
+                  ],
+                },
+              ]
+            : []),
         ],
       });
     });
@@ -338,15 +351,19 @@ export class PdfService {
               },
             ],
           },
-          {
-            text: [
-              {
-                text: 'Technologies: ',
-                bold: true,
-              },
-              proj.keyTechs.join(', '),
-            ],
-          },
+          ...(proj.keyTechs && proj.keyTechs.length > 0
+            ? [
+                {
+                  text: [
+                    {
+                      text: 'Technologies: ',
+                      bold: true,
+                    },
+                    proj.keyTechs.join(', '),
+                  ],
+                },
+              ]
+            : []),
           {
             text: [
               {
