@@ -13,7 +13,7 @@ Angular 17 portfolio application with two routes:
 ```bash
 ng serve              # Dev server at http://localhost:4200
 ng build              # Production build to dist/portfolio
-npm run build:prod    # Production build with base-href / and 404.html fallback
+npm run build:prod    # Production build with base-href /portfolio/ and 404.html fallback
 ng test               # Run unit tests via Karma
 npm run deploy:ghpages # Manual deploy to GitHub Pages via angular-cli-ghpages
 ```
