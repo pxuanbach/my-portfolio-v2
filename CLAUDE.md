@@ -13,9 +13,9 @@ Angular 17 portfolio application with two routes:
 ```bash
 ng serve              # Dev server at http://localhost:4200
 ng build              # Production build to dist/portfolio
-ng build:prod         # Production build with custom base-href for deployment
+npm run build:prod    # Production build with base-href / and 404.html fallback
 ng test               # Run unit tests via Karma
-ng deploy:ghpages     # Deploy to GitHub Pages (angular-cli-ghpages)
+npm run deploy:ghpages # Manual deploy to GitHub Pages via angular-cli-ghpages
 ```
 
 Docker:

@@ -28,6 +28,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/CNAME",
               {
                 "glob": "**/*",
                 "input": "node_modules/ngx-extended-pdf-viewer/assets/",
@@ -101,7 +102,12 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "dir": "dist/portfolio/browser",
+            "cname": "portfolio.pxuanbach.id.vn",
+            "noSilent": true
+          }
         }
       }
     }

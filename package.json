@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration --base-href https://portfolio.pxuanbach.id.vn/",
+    "build:prod": "ng build --configuration production --base-href / && npm run postbuild",
+    "postbuild": "node -e \"const fs=require('fs'); if(fs.existsSync('dist/portfolio/browser/index.html')) fs.copyFileSync('dist/portfolio/browser/index.html', 'dist/portfolio/browser/404.html')\"",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-image": "docker build -t pxuanbach/my-portfolio-v2 .",
@@ -13,7 +14,7 @@
     "up": "docker compose up -d",
     "down": "docker compose down",
     "pull": "docker compose pull",
-    "deploy:ghpages": "ng deploy --cname=portfolio.pxuanbach.id.vn --repo=https://github.com/pxuanbach/my-portfolio-v2.git"
+    "deploy:ghpages": "npm run build:prod && ng deploy"
   },
   "private": true,
   "dependencies": {
