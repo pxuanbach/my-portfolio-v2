@@ -1,14 +1,35 @@
 [
   {
+    "companyName": "SHIFT ASIA",
+    "position": "Full-stack Software Engineer",
+    "startDate": "09/2024",
+    "endDate": "Present",
+    "descriptions": [
+      "Built responsive web applications in Next.js and TypeScript, developing reusable components for interactive document diff viewers and complex operational workflows.",
+      "Developed dynamic table views and customizable column layouts for users to filter and browse complex records.",
+      "Investigated, reproduced, and patched critical vulnerabilities, including role-based authorization bypasses and XSS.",
+      "Built harness workflows to integrate AI agents into the SDLC, improving code generation quality for new modules.",
+      "Handled long-running tasks end-to-end: optimized backend processing via batching and parallel execution, paired with async status polling on the frontend."
+    ],
+    "keyTechs": [
+      "Next.js, TypeScript, Keycloak, FastAPI, Nest.js, PostgreSQL, TypeORM, Elasticsearch, Docker, Strands Agents, Github Copilot"
+    ]
+  },
+  {
     "companyName": "TiSoHa Software Solution",
     "position": "Intern & Software Engineer",
     "startDate": "07/2022",
-    "endDate": "Present",
+    "endDate": "08/2024",
     "descriptions": [
-      "Collaborated with senior engineers to develop new features and solve technical problems.",
-      "Produced modern, high-performance, and maintainable code for a wide range of projects.",
-      "Estimated and optimized the company's expenditures for cloud services.",
-      "Trained new engineers on processes and technical skills to help them develop and confidently solve problems independently."
+      "Built responsive SaaS analytics dashboards and referral tracking portals using AngularJS and Bootstrap.",
+      "Diagnosed and fixed client-side race conditions and state desynchronization during concurrent SaaS data syncs.",
+      "Integrated Stripe Checkout and multi-tier subscriptions on the frontend with backend webhook handlers to automate recurring billing.",
+      "Designed and consumed REST APIs in Express.js and FastAPI, standardizing data contracts across services.",
+      "Configured automated CI/CD pipelines with GitLab CI/CD and Docker, deploying staging and production environments to DigitalOcean with Nginx.",
+      "Mentored new engineers on coding standards, debugging techniques, and frontend-backend integration to shorten onboarding time."
+    ],
+    "keyTechs": [
+      "Angular.js, Bootstrap, JavaScript, Express.js, FastAPI, Prisma, MongoDB, PostgreSQL, Stripe, Redis, Docker, GitLab CI/CD"
     ]
   }
 ]

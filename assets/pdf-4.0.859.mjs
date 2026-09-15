@@ -1532,7 +1532,7 @@ function isValidFetchUrl(url, baseUrl) {
 }
 function generateTrustedURL(sourcePath) {
   if (window.trustedTypes) {
-    const sanitizer = window.trustedTypes.createPolicy("foo", {
+    const sanitizer = window.trustedTypes.createPolicy("pdf-viewer-2", {
       createScriptURL: url => url
     });
     return sanitizer.createScriptURL(sourcePath);
@@ -2838,9 +2838,28 @@ class AnnotationEditorUIManager {
         for (const [editor, {
           newX,
           newY,
-          newPageIndex
+          newPageIndex,
+          savedX,
+          savedY,
+          savedPageIndex
         }] of map) {
           move(editor, newX, newY, newPageIndex);
+          this._eventBus?.dispatch("annotation-editor-event", {
+            source: editor,
+            type: "moved",
+            page: newPageIndex + 1,
+            editorType: editor.constructor.name,
+            previousValue: {
+              x: savedX,
+              y: savedY,
+              page: savedPageIndex + 1
+            },
+            value: {
+              x: newX,
+              y: newY,
+              page: newPageIndex + 1
+            }
+          });
         }
       },
       undo: () => {
@@ -2898,9 +2917,11 @@ class AnnotationEditorUIManager {
     let hasChanged = false;
     this.#allLayers.forEach(layer => layer.setCleaningUp(true));
     this.#allEditors.forEach(editor => {
-      if (filterFunction(editor.serialize())) {
-        editor.remove();
-        hasChanged = true;
+      if (editor?.serialize()) {
+        if (filterFunction(editor.serialize())) {
+          editor.remove();
+          hasChanged = true;
+        }
       }
     });
     this.#allLayers.forEach(layer => layer.setCleaningUp(false));
@@ -3231,6 +3252,7 @@ class AnnotationEditor {
     this.y = parameters.y / height;
     this.isAttachedToDOM = false;
     this.deleted = false;
+    this.eventBus = parameters.eventBus;
   }
   get editorType() {
     return Object.getPrototypeOf(this).constructor._type;
@@ -3362,6 +3384,13 @@ class AnnotationEditor {
   }
   commit() {
     this.addToAnnotationStorage();
+    this._eventBus?.dispatch("annotation-editor-event", {
+      source: this,
+      type: "commit",
+      page: this.pageIndex + 1,
+      editorType: this.constructor.name,
+      value: this
+    });
   }
   addToAnnotationStorage() {
     this._uiManager.addToAnnotationStorage(this);
@@ -3625,6 +3654,18 @@ class AnnotationEditor {
     if (newX === savedX && newY === savedY && newWidth === savedWidth && newHeight === savedHeight) {
       return;
     }
+    this.eventBus?.dispatch("annotation-editor-event", {
+      source: this,
+      type: "sizeChanged",
+      editorType: this.constructor.name,
+      page: this.pageIndex + 1,
+      value: {
+        x: savedX,
+        y: savedY,
+        width: savedWidth,
+        height: savedHeight
+      }
+    });
     this.addCommands({
       cmd: () => {
         this.width = newWidth;
@@ -3735,6 +3776,13 @@ class AnnotationEditor {
   }
   altTextFinish() {
     this.#altText?.finish();
+    this.eventBus?.dispatch("annotation-editor-event", {
+      source: this,
+      type: "altTextChanged",
+      page: this.pageIndex + 1,
+      editorType: this.constructor.name,
+      value: this.#altText
+    });
   }
   async addEditToolbar() {
     if (this.#editToolbar || this.#isInEditMode) {
@@ -3962,6 +4010,13 @@ class AnnotationEditor {
     }
     this.#stopResizing();
     this.removeEditToolbar();
+    this.eventBus?.dispatch("annotation-editor-event", {
+      source: this,
+      type: "removed",
+      page: this.pageIndex + 1,
+      editorType: this.constructor.name,
+      value: this
+    });
   }
   get isResizable() {
     return false;
@@ -9679,7 +9734,7 @@ function getDocument(src) {
   }
   const fetchDocParams = {
     docId,
-    apiVersion: '4.0.850',
+    apiVersion: '4.0.859',
     data,
     password,
     disableAutoFetch,
@@ -10520,10 +10575,7 @@ class PDFWorker {
   }
   #generateTrustedURL(sourcePath) {
     if (window.trustedTypes) {
-      const sanitizer = window.trustedTypes.createPolicy("foo", {
-        createScriptURL: url => url
-      });
-      return sanitizer.createScriptURL(sourcePath);
+      return window.pdfViewerSanitizer.createScriptURL(sourcePath);
     }
     return sourcePath;
   }
@@ -11446,8 +11498,8 @@ class InternalRenderTask {
     }
   }
 }
-const version = '4.0.850';
-const build = 'c77971531';
+const version = '4.0.859';
+const build = 'b8df540e0';
 
 ;// CONCATENATED MODULE: ./src/display/text_layer.js
 
@@ -14723,6 +14775,14 @@ class FreeTextEditor extends AnnotationEditor {
       overwriteIfSameType: true,
       keepUndo: true
     });
+    this.eventBus?.dispatch("annotation-editor-event", {
+      source: this,
+      type: "fontSizeChanged",
+      page: this.pageIndex + 1,
+      editorType: this.constructor.name,
+      value: fontSize,
+      previousValue: this.#fontSize
+    });
   }
   #updateColor(color) {
     const savedColor = this.#color;
@@ -14737,6 +14797,14 @@ class FreeTextEditor extends AnnotationEditor {
       type: AnnotationEditorParamsType.FREETEXT_COLOR,
       overwriteIfSameType: true,
       keepUndo: true
+    });
+    this.eventBus?.dispatch("annotation-editor-event", {
+      source: this,
+      type: "colorChanged",
+      page: this.pageIndex + 1,
+      editorType: this.constructor.name,
+      value: color,
+      previousValue: this.#color
     });
   }
   _translateEmpty(x, y) {
@@ -14894,6 +14962,13 @@ class FreeTextEditor extends AnnotationEditor {
       mustExec: false
     });
     this.#setEditorDimensions();
+    this.eventBus?.dispatch("annotation-editor-event", {
+      source: this,
+      type: "commit",
+      page: this.pageIndex + 1,
+      value: newText,
+      previousValue: savedText
+    });
   }
   shouldGetKeyboardEvents() {
     return this.isInEditMode();
@@ -15562,6 +15637,14 @@ class HighlightEditor extends AnnotationEditor {
       overwriteIfSameType: true,
       keepUndo: true
     });
+    this.eventBus?.dispatch("annotation-editor-event", {
+      source: this,
+      type: "colorChanged",
+      page: this.pageIndex + 1,
+      editorType: this.constructor.name,
+      value: color,
+      previousValue: savedColor
+    });
   }
   async addEditToolbar() {
     const toolbar = await super.addEditToolbar();
@@ -15902,6 +15985,14 @@ class InkEditor extends AnnotationEditor {
       overwriteIfSameType: true,
       keepUndo: true
     });
+    this.eventBus?.dispatch("annotation-editor-event", {
+      source: this,
+      type: "thicknessChanged",
+      page: this.pageIndex + 1,
+      editorType: this.constructor.name,
+      value: thickness,
+      previousValue: savedThickness
+    });
   }
   #updateColor(color) {
     const savedColor = this.color;
@@ -15918,6 +16009,14 @@ class InkEditor extends AnnotationEditor {
       type: AnnotationEditorParamsType.INK_COLOR,
       overwriteIfSameType: true,
       keepUndo: true
+    });
+    this.eventBus?.dispatch("annotation-editor-event", {
+      source: this,
+      type: "colorChanged",
+      page: this.pageIndex + 1,
+      editorType: this.constructor.name,
+      value: color,
+      previousValue: savedColor
     });
   }
   #updateOpacity(opacity) {
@@ -15936,6 +16035,14 @@ class InkEditor extends AnnotationEditor {
       type: AnnotationEditorParamsType.INK_OPACITY,
       overwriteIfSameType: true,
       keepUndo: true
+    });
+    this.eventBus?.dispatch("annotation-editor-event", {
+      source: this,
+      type: "opacityChanged",
+      page: this.pageIndex + 1,
+      editorType: this.constructor.name,
+      value: opacity,
+      previousValue: savedOpacity
     });
   }
   rebuild() {
@@ -16135,6 +16242,14 @@ class InkEditor extends AnnotationEditor {
       cmd,
       undo,
       mustExec: true
+    });
+    this.eventBus?.dispatch("annotation-editor-event", {
+      source: this,
+      type: "bezierPathChanged",
+      page: this.pageIndex + 1,
+      editorType: this.constructor.name,
+      value: bezier,
+      previousValue: currentPath
     });
   }
   #drawPoints() {
@@ -17028,7 +17143,8 @@ class AnnotationEditorLayer {
     drawLayer,
     textLayer,
     viewport,
-    l10n
+    l10n,
+    eventBus
   }) {
     const editorTypes = [...AnnotationEditorLayer.#editorTypes.values()];
     if (!AnnotationEditorLayer._initialized) {
@@ -17047,6 +17163,7 @@ class AnnotationEditorLayer {
     this.#textLayer = textLayer;
     this.drawLayer = drawLayer;
     this.#uiManager.addLayer(this);
+    this.eventBus = eventBus;
   }
   get isEmpty() {
     return this.#editors.size === 0;
@@ -17355,6 +17472,7 @@ class AnnotationEditorLayer {
       y: event.offsetY,
       uiManager: this.#uiManager,
       isCentered,
+      eventBus: this.eventBus,
       ...data
     });
     if (editor) {
@@ -17770,8 +17888,8 @@ class DrawLayer {
 
 
 
-const pdfjsVersion = '4.0.850';
-const pdfjsBuild = 'c77971531';
+const pdfjsVersion = '4.0.859';
+const pdfjsBuild = 'b8df540e0';
 
 var __webpack_exports__AbortException = __webpack_exports__.AbortException;
 var __webpack_exports__AnnotationEditorLayer = __webpack_exports__.AnnotationEditorLayer;

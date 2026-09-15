@@ -1,70 +1,85 @@
 [
   {
-    "name": "Iyyara & Halalfoodhunt",
-    "myRole": "Back-end Engineer",
-    "shortDes": "Iyyara & Halalfoodhunt is an app from Singapore that verifies halal food options (eateries, online businesses, food vendors, etc.) before publishing them.",
-    "startDate": "08/2023",
+    "name": "Doc Compare & Highlight Agent",
+    "myRole": "Full-stack Engineer",
+    "shortDes": "Agentic workflow that reads documents to compare and highlight differences against user queries.",
+    "startDate": "07/2026",
     "endDate": "Present",
     "descriptions": [
-      "Developed RESTful APIs for a new module using Express.js and Prisma, ensuring data integrity with thorough testing.",
-      "Implemented Stripe payments and business logic to create custom subscription plans.",
-      "Configured CI/CD pipeline to deploy the product to staging and production environments using GitLab CI/CD, and Docker.",
-      "Created a scheduled database backup strategy with Shell Script for self-deployed MongoDB."
+      "Built an interactive visual diff and highlight interface in Next.js for document comparison results.",
+      "Optimized Strands Agents in FastAPI using context-aware routing, batch processing, and parallel execution."
     ],
-    "keyTechs": [
-      "Express.js, Meteor.js, Prisma, MongoDB, Docker, GitLab CI/CD, Shell Script, AWS S3"
+    "teamsize": 3
+  },
+  {
+    "name": "Digital Grading and Evaluation System",
+    "myRole": "Full-stack Engineer",
+    "shortDes": "Grading and evaluation platform developed for elementary, middle, and high schools.",
+    "startDate": "11/2025",
+    "endDate": "06/2026",
+    "descriptions": [
+      "Refactored legacy evaluation modules using Next.js, Nest.js, and Keycloak RBAC.",
+      "Investigated and patched authorization bypass vulnerabilities and legacy encryption flaws."
+    ],
+    "teamsize": 10
+  },
+  {
+    "name": "B2B-focused Matching Platform",
+    "myRole": "Full-stack Engineer",
+    "shortDes": "B2B platform that matches software development companies with prime contracts.",
+    "startDate": "09/2024",
+    "endDate": "10/2025",
+    "descriptions": [
+      "Built modular Next.js UI components integrated with Elasticsearch for contract matching.",
+      "Created prompt harnesses and guidelines for AI agents to generate system modules."
+    ],
+    "teamsize": 11
+  },
+  {
+    "name": "Iyyara & Halalfoodhunt",
+    "myRole": "Back-end Engineer",
+    "shortDes": "Singapore-based directory that verifies and lists halal food businesses, eateries, and vendors.",
+    "startDate": "08/2023",
+    "endDate": "08/2024",
+    "descriptions": [
+      "Migrated a monolithic Meteor.js application to Express.js and Next.js, improving page load speeds and code maintainability.",
+      "Wrote automated shell scripts to handle scheduled backups for self-hosted MongoDB instances."
     ],
     "teamsize": 7
   },
   {
     "name": "Tico E-commerce",
     "myRole": "Back-end Engineer",
-    "shortDes": "Tico E-commerce is an in-house product, a set of commerce tools and modules that can be used to build unique commerce experiences.",
+    "shortDes": "In-house toolkit of modular services and UI components for building custom e-commerce stores.",
     "startDate": "11/2022",
-    "endDate": "Present",
+    "endDate": "08/2024",
     "descriptions": [
-      "Conducted in-depth analysis and research on popular Open-source platforms to plan and break down features.",
-      "Leveraged my expertise in Python, FastAPI and PostgreSQL to build a scalable and high-performance e-commerce module that seamlessly integrates with existing systems.",
-      "Guided newly joined engineers, facilitating their integration into the project quickly.",
-      "Configured Nginx as a scalable API Gateway and Load Balancer, following best practices to ensure security, and optimal performance.",
-      "Established a seamless integration for diverse payment gateways (VNPay, Momo, Stripe) and shipping providers (GHTK, GHN) within the system."
-    ],
-    "keyTechs": [
-      "FastAPI, PostgreSQL, Redis, SQLAlchemy, APScheduler, Pytest, GitLab CI/CD, Docker, Nginx, AWS EC2"
+      "Researched open-source platforms and implemented core catalog services in FastAPI.",
+      "Onboarded and mentored new engineers on team workflows and codebase conventions."
     ],
     "teamsize": 8
   },
   {
     "name": "Early Parrot",
     "myRole": "Full-stack Engineer",
-    "shortDes": "EarlyParrot is a <b>SaaS</b> referral marketing platform from Malta that includes marketing automation tools, tracking and analytics features.",
+    "shortDes": "Malta-based referral marketing SaaS featuring campaign automation, tracking, and analytics tools.",
     "startDate": "07/2023",
     "endDate": "02/2024",
     "descriptions": [
-      "Leveraged Angular.js and Bootstrap to craft an intuitive user interface, ensuring a seamless user experience.",
-      "Developed complex features with Express.js to track marketing campaign metrics, empowering users to analyze campaign effectiveness.",
-      "Built robust data synchronization mechanisms with Agenda.js to guarantee user data integrity across diverse SaaS ecosystems.",
-      "Addressed race condition occurrences within legacy features and during concurrent data synchronization."
-    ],
-    "keyTechs": [
-      "Express.js, MongoDB, Redis, Angular.js, Async.js, Agenda.js, Mongoose, Bootstrap, Linux, PM2"
+      "Built referral tracking interfaces and campaign analytics dashboards with AngularJS and Bootstrap.",
+      "Resolved race conditions during concurrent data synchronizations across third-party SaaS platforms."
     ],
     "teamsize": 3
   },
   {
     "name": "Mark Platform",
     "myRole": "Back-end Engineer",
-    "shortDes": "Mark Platform is a platform that connects homeowners with top-rated interior designers in Singapore.",
+    "shortDes": "Singapore-based platform connecting homeowners with vetted interior designers.",
     "startDate": "08/2022",
     "endDate": "06/2023",
     "descriptions": [
-      "Developed middleware to dynamically authenticate user roles based on API endpoints.",
-      "Employed FastAPI to expedite RESTful API development and bolstered code quality through automated testing with Pytest.",
-      "Incorporated Stripe Payments API to establish a robust subscription system.",
-      "Implemented a CI/CD pipeline on GitLab CI/CD for automated deployments utilizing Docker and Nginx on a DigitalOcean Droplet."
-    ],
-    "keyTechs": [
-      "FastAPI, PostgreSQL, SQLAlchemy, APScheduler, FastAPI Users, Pytest, Firebase, Docker, Nginx, GitLab CI/CD, Shell Script"
+      "Built dynamic role-based authentication middleware and designer matching APIs in FastAPI.",
+      "Scoped new feature requirements with the product team, outlining technical constraints and implementation plans."
     ],
     "teamsize": 6
   }

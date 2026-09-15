@@ -50510,7 +50510,8 @@ class AnnotationFactory {
       needAppearances: !collectFields && acroForm.get("NeedAppearances") === true,
       pageIndex,
       evaluatorOptions: pdfManager.evaluatorOptions,
-      pageRef
+      pageRef,
+      eventBus: pdfManager.eventBus
     };
     switch (subtype) {
       case "Link":
@@ -56638,7 +56639,7 @@ class WorkerMessageHandler {
       docId,
       apiVersion
     } = docParams;
-    const workerVersion = '4.0.850';
+    const workerVersion = '4.0.859';
     if (apiVersion !== workerVersion) {
       throw new Error(`The API version "${apiVersion}" does not match ` + `the Worker version "${workerVersion}".`);
     }
@@ -57212,8 +57213,8 @@ if (typeof window === "undefined" && typeof self !== "undefined" && isMessagePor
 
 ;// CONCATENATED MODULE: ./src/pdf.worker.js
 
-const pdfjsVersion = '4.0.850';
-const pdfjsBuild = 'c77971531';
+const pdfjsVersion = '4.0.859';
+const pdfjsBuild = 'b8df540e0';
 
 var __webpack_exports__WorkerMessageHandler = __webpack_exports__.WorkerMessageHandler;
 export { __webpack_exports__WorkerMessageHandler as WorkerMessageHandler };
