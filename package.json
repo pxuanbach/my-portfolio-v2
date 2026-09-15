@@ -14,7 +14,7 @@
     "up": "docker compose up -d",
     "down": "docker compose down",
     "pull": "docker compose pull",
-    "deploy:ghpages": "npm run build:prod && ng deploy"
+    "deploy:ghpages": "ng deploy --remote=origin"
   },
   "private": true,
   "dependencies": {

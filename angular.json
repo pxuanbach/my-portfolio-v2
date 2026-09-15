@@ -106,7 +106,7 @@
           "options": {
             "dir": "dist/portfolio/browser",
             "cname": "portfolio.pxuanbach.id.vn",
-            "noSilent": true
+            "remote": "origin"
           }
         }
       }
